@@ -10,6 +10,7 @@
 \usepackage{tikz}
 \usepackage{subcaption}
 \usepackage{booktabs}
+\usepackage{xurl}
 
 \title{Using Bayesian Regression to Quantify Sexual Dimorphism in Extinct Taxa}
 \author{Eric Campbell}
@@ -83,7 +84,7 @@ the parameter $L$ is the asymptotic length, and so the actual level of sexual di
 L_{ m/f } &\sim \normal{\text{population L}}{0.5} \\
 A_{ m/f } &\sim \normal{\text{population A}}{0.025} \\
 K_{ m/f } &\sim \normal{\text{population K}}{0.05} \\
-\sigma &= 0.25 \\
+\sigma &\sim \normal{0.25}{0.05} \\
 \end{align*}
 
 Since the priors used for the male and female parameters are identical (and initially have means equal to the population-level parameters), the results are slightly biased toward a finding of minimal or no sexual dimorphism.
@@ -199,5 +200,8 @@ Despite these advantages, there remain many area in which this method could be i
 
 Determining levels of sexual dimorphism when both sex and size determination are difficult is naturally a difficult problem, and the method here, while offering an incremental improvement over existing methods, is certainly no panacea. Further efforts, both on the statistical and palaeontological side of the equation, will be required in order to improve our understanding of sexual dimorphism within extinct taxa.
 
+For all data and analyses used here, see \url{https://github.com/EricRobertCampbell/aps-2024-poster-sexual-dimorphism}.
+
 \printbibliography[title=Bibliography]
+
 \end{document}

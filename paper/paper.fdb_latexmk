@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber paper"] 1707662584 "paper.bcf" "paper.bbl" "paper" 1707662603 0
+["biber paper"] 1707662584 "paper.bcf" "paper.bbl" "paper" 1707663504 0
   "./bibliography.bib" 1707662582 32490 b384001249f5b50e25c248bd59ebaaa9 ""
-  "paper.bcf" 1707662602 109361 d8b7b1a2a20eeff7d4e41ad30b823d3d "pdflatex"
+  "paper.bcf" 1707663503 109361 d8b7b1a2a20eeff7d4e41ad30b823d3d "pdflatex"
   (generated)
   "paper.bbl"
   "paper.blg"
   (rewritten before read)
-["pdflatex"] 1707662594 "paper.tex" "paper.pdf" "paper" 1707662603 0
+["pdflatex"] 1707663495 "paper.tex" "paper.pdf" "paper" 1707663504 0
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -160,12 +160,13 @@
   "/usr/local/texlive/2023/texmf-dist/tex/latex/translations/translations.sty" 1644096163 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty" 1655066402 56148 51a9a8571c07b9921892ae11063ae853 ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/xurl/xurl.sty" 1641763214 4675 e4b8c405820368c2dfb03526e16d725a ""
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1704510363 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1704510350 7883456 b261199a6e3d79384bb68a38c5694cbc ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "images/alligatorEffectSize.png" 1707611287 457154 796bf3dcb08b5afafec32694d412d1aa ""
-  "images/alligatorMethod.png" 1707607682 749137 545f8c3e7616a8637f2abd936fb26247 ""
+  "images/alligatorMethod.png" 1707663458 746408 21f240feacff99b1a7eae135e15bca45 ""
   "images/alligatorSampleSize.png" 1707608858 189880 3d1331db83eec38c69b5f111d462451b ""
   "images/alligatorSexPredictionAccuracyDimorphismError.png" 1707611288 236428 835129eb3af2d5f6b0d6d83188fff532 ""
   "images/combinedDimorphism.png" 1707661302 318838 ac4aaf0499e154e4ca042ec53fd42ea0 ""
@@ -175,10 +176,10 @@
   "images/psittacosaurusPrior.png" 1707661291 212746 3e4ec407fe106c9075c67b4d7a3968fc ""
   "images/tyrannosaurPosterior.png" 1707661301 787959 bd98e39a62f1bb430228fdf6919ccc72 ""
   "images/tyrannosaurPrior.png" 1707661297 213353 9b8784f305009b9a849294f3b981d914 ""
-  "paper.aux" 1707662602 6384 eaee128ae323f5594d32c2d5fabc9ce9 "pdflatex"
+  "paper.aux" 1707663503 6384 6e9d82751abd0aa2de29d8aa4511c0f5 "pdflatex"
   "paper.bbl" 1707662586 43228 539a9c8fc980801884e0e7bcb3b91a9e "biber paper"
-  "paper.run.xml" 1707662602 2364 a87a05c7c33c95d0788be53a6be8c618 "pdflatex"
-  "paper.tex" 1707662493 13657 1807cd120536ad46906c354a7b56850b ""
+  "paper.run.xml" 1707663503 2364 a87a05c7c33c95d0788be53a6be8c618 "pdflatex"
+  "paper.tex" 1707663358 13815 b53c0c8ea9d7ede03c701d26031efb53 ""
   (generated)
   "paper.aux"
   "paper.bcf"

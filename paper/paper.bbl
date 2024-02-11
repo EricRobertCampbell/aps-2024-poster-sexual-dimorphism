@@ -1,0 +1,752 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{brusatte2012}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=24e8920824cc1bf8330906f6b9e99c9b}{%
+           family={Brusatte},
+           familyi={B\bibinitperiod},
+           given={Stephen\bibnamedelima L},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Wiley-Blackwell}%
+      }
+      \strng{namehash}{24e8920824cc1bf8330906f6b9e99c9b}
+      \strng{fullhash}{24e8920824cc1bf8330906f6b9e99c9b}
+      \strng{bibnamehash}{24e8920824cc1bf8330906f6b9e99c9b}
+      \strng{authorbibnamehash}{24e8920824cc1bf8330906f6b9e99c9b}
+      \strng{authornamehash}{24e8920824cc1bf8330906f6b9e99c9b}
+      \strng{authorfullhash}{24e8920824cc1bf8330906f6b9e99c9b}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{series}{TOPA Topics in Paleobiology}
+      \field{title}{Dinosaur Paleobiology}
+      \field{year}{2012}
+    \endentry
+    \entry{ericksonGigantismComparativeLifehistory2004}{article}{}
+      \name{author}{6}{ul=3}{%
+        {{un=0,uniquepart=base,hash=1dd231ff008f96c70608075c3d44d5e9}{%
+           family={Erickson},
+           familyi={E\bibinitperiod},
+           given={Gregory\bibnamedelima M.},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f227ffb4e26c9351e7b99db1733731d5}{%
+           family={Makovicky},
+           familyi={M\bibinitperiod},
+           given={Peter\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=34fa785b22112545b68300d958e0877e}{%
+           family={Currie},
+           familyi={C\bibinitperiod},
+           given={Philip\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3c357e2cebb195b19558df5a173c0a9}{%
+           family={Norell},
+           familyi={N\bibinitperiod},
+           given={Mark\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=013b77c082256bc66b6be62d274e1db5}{%
+           family={Yerby},
+           familyi={Y\bibinitperiod},
+           given={Scott\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c03d871c2d1cac02721acfc5a3e5a256}{%
+           family={Brochu},
+           familyi={B\bibinitperiod},
+           given={Christopher\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6298175213ccbad299beab2f623e8b80}
+      \strng{fullhash}{b27e1171bd6a3cec4093e34f81d5c20e}
+      \strng{bibnamehash}{6298175213ccbad299beab2f623e8b80}
+      \strng{authorbibnamehash}{6298175213ccbad299beab2f623e8b80}
+      \strng{authornamehash}{6298175213ccbad299beab2f623e8b80}
+      \strng{authorfullhash}{b27e1171bd6a3cec4093e34f81d5c20e}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{How evolutionary changes in body size are brought about by variance in developmental timing and/or growth rates (also known as heterochrony) is a topic of considerable interest in evolutionary biology1. In particular, extreme size change leading to gigantism occurred within the dinosaurs on multiple occasions2. Whether this change was brought about by accelerated growth, delayed maturity or a combination of both processes is unknown. A better understanding of relationships between non-avian dinosaur groups and the newfound capacity to reconstruct their growth curves make it possible to address these questions quantitatively3. Here we study growth patterns within the Tyrannosauridae, the best known group of large carnivorous dinosaurs, and determine the developmental means by which Tyrannosaurus rex, weighing 5,000 kg and more, grew to be one of the most enormous terrestrial carnivorous animals ever. T. rex had a maximal growth rate of 2.1 kg d-1, reached skeletal maturity in two decades and lived for up to 28 years. T. rex's great stature was primarily attained by accelerating growth rates beyond that of its closest relatives.}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{note}{Number: 7001 Publisher: Nature Publishing Group}
+      \field{number}{7001}
+      \field{title}{Gigantism and comparative life-history parameters of tyrannosaurid dinosaurs}
+      \field{urlday}{2}
+      \field{urlmonth}{7}
+      \field{urlyear}{2022}
+      \field{volume}{430}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{772\bibrangedash 775}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1038/nature02699
+      \endverb
+      \verb{file}
+      \verb 41586_2016_BFnature16487_MOESM2_ESM.zip:/Users/ericr/Zotero/storage/GUNE3MXV/41586_2016_BFnature16487_MOESM2_ESM.zip:application/x-zip-compressed;Erickson et al. - 2004 - Gigantism and comparative life-history parameters .pdf:/Users/ericr/Zotero/storage/TF48SQLR/Erickson et al. - 2004 - Gigantism and comparative life-history parameters .pdf:application/pdf;Snapshot:/Users/ericr/Zotero/storage/4PZUUIAD/nature02699.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/nature02699
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/nature02699
+      \endverb
+      \keyw{Ontogeny,Humanities and Social Sciences,multidisciplinary,Science,read}
+    \endentry
+    \entry{ericksonFlawedAnalysisResponse2015}{article}{}
+      \name{author}{5}{ul=3}{%
+        {{un=0,uniquepart=base,hash=1dd231ff008f96c70608075c3d44d5e9}{%
+           family={Erickson},
+           familyi={E\bibinitperiod},
+           given={Gregory\bibnamedelima M.},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f227ffb4e26c9351e7b99db1733731d5}{%
+           family={Makovicky},
+           familyi={M\bibinitperiod},
+           given={Peter\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d6741c51a24760ee8474caeb79395ee9}{%
+           family={Inouye},
+           familyi={I\bibinitperiod},
+           given={Brian\bibnamedelima D.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c2128f4447dd17f222c888387e2b687a}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Chang‐Fu},
+           giveni={C\bibinithyphendelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0b83401ed5c785661c259c86269a963}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Ke‐Qin},
+           giveni={K\bibinithyphendelim Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0b4b7d2d3be525a73fcfd9759a02a0b6}
+      \strng{fullhash}{d7b43885e6213815b67e395b99e33c1b}
+      \strng{bibnamehash}{0b4b7d2d3be525a73fcfd9759a02a0b6}
+      \strng{authorbibnamehash}{0b4b7d2d3be525a73fcfd9759a02a0b6}
+      \strng{authornamehash}{0b4b7d2d3be525a73fcfd9759a02a0b6}
+      \strng{authorfullhash}{d7b43885e6213815b67e395b99e33c1b}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{1932-8486, 1932-8494}
+      \field{journaltitle}{The Anatomical Record}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{10}
+      \field{shortjournal}{The Anatomical Record}
+      \field{shorttitle}{Flawed Analysis?}
+      \field{title}{Flawed Analysis? A Response to Myhrvold}
+      \field{urlday}{1}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{volume}{298}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1669\bibrangedash 1672}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1002/ar.23187
+      \endverb
+      \verb{file}
+      \verb Erickson et al. - 2015 - Flawed Analysis A Response to Myhrvold.pdf:/Users/ericr/Zotero/storage/HZTXWBNG/Erickson et al. - 2015 - Flawed Analysis A Response to Myhrvold.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://anatomypubs.onlinelibrary.wiley.com/doi/10.1002/ar.23187
+      \endverb
+      \verb{url}
+      \verb https://anatomypubs.onlinelibrary.wiley.com/doi/10.1002/ar.23187
+      \endverb
+      \keyw{to-read,!!!,!{growthCurves}}
+    \endentry
+    \entry{honeProtractedGrowthImpedes2017}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=5441e6562285b479db620f7efb19b3dc}{%
+           family={Hone},
+           familyi={H\bibinitperiod},
+           given={David\bibnamedelimb W.\bibnamedelimi E.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9541126f541e17afc2277a38c1240f2}{%
+           family={Mallon},
+           familyi={M\bibinitperiod},
+           given={Jordan\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{842a093db2c86262ca01c903be805091}
+      \strng{fullhash}{842a093db2c86262ca01c903be805091}
+      \strng{bibnamehash}{842a093db2c86262ca01c903be805091}
+      \strng{authorbibnamehash}{842a093db2c86262ca01c903be805091}
+      \strng{authornamehash}{842a093db2c86262ca01c903be805091}
+      \strng{authorfullhash}{842a093db2c86262ca01c903be805091}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Evidence for sexual dimorphism is extremely limited in the non-avian dinosaurs despite their high diversity and disparity, and despite the fact that dimorphism is very common in vertebrate lineages of all kinds. Using body-size data from both Alligator mississippiensis and Rhea americana, which phylogenetically bracket the dinosaurs, we demonstrate that even when there is strong dimorphism in a species, random sampling of populations of individuals characterized by sustained periods of growth (as in the alligator and most dinosaurs) can result in the loss of this signal. Dimorphism may be common in fossil taxa but very hard to detect without ontogenetic age control and large sample sizes, both of which are hampered by the limitations of the fossil record. Signal detection may be further hindered by Type {III} survivorship, whereby increased mortality among the young favours the likelihood that they will be sampled (unless predation or taphonomic bias against small size acts against this). These, and other considerations relating to behaviour and ecology, provide powerful reasons to suggest that sexual dimorphism in dinosaurs may be very difficult to detect in almost all currently available samples. Similar issues are likely also to be applicable to many fossil reptiles, or animals more generally.}
+      \field{issn}{1475-4983}
+      \field{journaltitle}{Palaeontology}
+      \field{langid}{english}
+      \field{number}{4}
+      \field{title}{Protracted growth impedes the detection of sexual dimorphism in non-avian dinosaurs}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{volume}{60}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{535\bibrangedash 545}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1111/pala.12298
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/ericr/Zotero/storage/MQYY4HBP/Hone and Mallon - 2017 - Protracted growth impedes the detection of sexual .pdf:application/pdf;Snapshot:/Users/ericr/Zotero/storage/SEXZ4Z6F/pala.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/pala.12298
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/pala.12298
+      \endverb
+      \keyw{dinosaurs,sexual selection,sexual dimorphism,growth,ontogeny,to-read,!!!}
+    \endentry
+    \entry{hornerAgeGrowthDynamics2004}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3be75b1489a0fc1358582c60ba986400}{%
+           family={Horner},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b707d8ffb1171d48f3d31b7eb4770899}{%
+           family={Padian},
+           familyi={P\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3057a5b09030b4cbde517a1e4fabccca}
+      \strng{fullhash}{3057a5b09030b4cbde517a1e4fabccca}
+      \strng{bibnamehash}{3057a5b09030b4cbde517a1e4fabccca}
+      \strng{authorbibnamehash}{3057a5b09030b4cbde517a1e4fabccca}
+      \strng{authornamehash}{3057a5b09030b4cbde517a1e4fabccca}
+      \strng{authorfullhash}{3057a5b09030b4cbde517a1e4fabccca}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Tyrannosaurus rex is the most commonly found North American latest Cretaceous theropod, but until the 1980s only five specimens had been discovered, and no more than six have received a full description. Consequently there has been little information on how old Tyrannosaurus specimens were at maturity or death. Histological analysis of seven individuals provided, for the first time, an opportunity to assess the age represented by the bone cortex, to estimate the average individual age of these skeletons, to determine whether they represented fully grown individuals, and to predict their individual longevity. Though a range of ages (15–25 years) was found for the specimens studied, the seven individuals demonstrate that T. rex reached effectively full size in less than 20 years. The growth rate of T. rex was comparable to that of the African elephant, which has a similar mass and time to maturity. Some of the known specimens of T. rex did not quite reach full size; others do not seem to have survived long after achieving it.}
+      \field{day}{22}
+      \field{journaltitle}{Proceedings of the Royal Society of London. Series B: Biological Sciences}
+      \field{month}{9}
+      \field{note}{Publisher: Royal Society}
+      \field{number}{1551}
+      \field{title}{Age and growth dynamics of Tyrannosaurus rex†}
+      \field{urlday}{3}
+      \field{urlmonth}{2}
+      \field{urlyear}{2024}
+      \field{volume}{271}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1875\bibrangedash 1880}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1098/rspb.2004.2829
+      \endverb
+      \verb{file}
+      \verb Full Text:/Users/ericr/Zotero/storage/SFQANTKY/Horner and Padian - 2004 - Age and growth dynamics of Tyrannosaurus rex†.pdf:application/pdf;Full Text PDF:/Users/ericr/Zotero/storage/YWIYA23C/Horner and Padian - 2004 - Age and growth dynamics of Tyrannosaurus rex†.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://royalsocietypublishing.org/doi/abs/10.1098/rspb.2004.2829
+      \endverb
+      \verb{url}
+      \verb https://royalsocietypublishing.org/doi/abs/10.1098/rspb.2004.2829
+      \endverb
+      \keyw{dinosaurs,bone histology,growth dynamics,growth rates,life–history strategy,tyrannosauridae,to-read,!!}
+    \endentry
+    \entry{leeSexualMaturityGrowing2008}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=5497038776ea8cb9f349c85763b1490b}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Andrew\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8042b58f82988ce0fb2650c150c51ad}{%
+           family={Werning},
+           familyi={W\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ad2a9b95669e936b431d9395cd6219b7}
+      \strng{fullhash}{ad2a9b95669e936b431d9395cd6219b7}
+      \strng{bibnamehash}{ad2a9b95669e936b431d9395cd6219b7}
+      \strng{authorbibnamehash}{ad2a9b95669e936b431d9395cd6219b7}
+      \strng{authornamehash}{ad2a9b95669e936b431d9395cd6219b7}
+      \strng{authorfullhash}{ad2a9b95669e936b431d9395cd6219b7}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recent histological studies suggest relatively rapid growth in dinosaurs. However, the timing of reproductive maturity ({RM}) in dinosaurs is poorly known because unambiguous indicators of {RM} are rare. One exception is medullary bone ({MB}), which is an ephemeral bony tissue that forms before ovulation in the marrow cavities of birds as a calcium source for eggshelling. Recently, {MB} also was described in a single specimen of the saurischian dinosaur Tyrannosaurus rex. Here, we report two other occurrences of {MB}: in another saurischian dinosaur, Allosaurus, and in the ornithischian dinosaur Tenontosaurus. We show by counting lines of arrested growth and performing growth curve reconstructions that Tenontosaurus, Allosaurus, and Tyrannosaurus were reproductively mature by 8, 10, and 18 years, respectively. {RM} in these dinosaurs coincided with a transition from growth acceleration to deceleration. It also far precedes predictions based on the growth rates of living reptiles scaled to similar size. Despite relatively rapid growth, dinosaurs were similar to reptiles in that {RM} developed before reaching asymptotic size. However, this reproductive strategy also occurs in medium- to large-sized mammals and correlates with a strategy of prolonged multiyear growth. {RM} in actively growing individuals suggests that these dinosaurs were born relatively precocial and experienced high adult mortality. The origin of the modern avian reproductive strategy in ornithuran birds likely coincided with their extreme elevations in growth rate and truncations to growth duration.}
+      \field{day}{15}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{month}{1}
+      \field{note}{Publisher: Proceedings of the National Academy of Sciences}
+      \field{number}{2}
+      \field{title}{Sexual maturity in growing dinosaurs does not fit reptilian growth models}
+      \field{urlday}{3}
+      \field{urlmonth}{2}
+      \field{urlyear}{2024}
+      \field{volume}{105}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{582\bibrangedash 587}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.0708903105
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/ericr/Zotero/storage/XK5NQAD2/Lee and Werning - 2008 - Sexual maturity in growing dinosaurs does not fit .pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.pnas.org/doi/abs/10.1073/pnas.0708903105
+      \endverb
+      \verb{url}
+      \verb https://www.pnas.org/doi/abs/10.1073/pnas.0708903105
+      \endverb
+      \keyw{to-read,!!}
+    \endentry
+    \entry{mallonRecognizingSexualDimorphism2017}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f9541126f541e17afc2277a38c1240f2}{%
+           family={Mallon},
+           familyi={M\bibinitperiod},
+           given={Jordan\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f9541126f541e17afc2277a38c1240f2}
+      \strng{fullhash}{f9541126f541e17afc2277a38c1240f2}
+      \strng{bibnamehash}{f9541126f541e17afc2277a38c1240f2}
+      \strng{authorbibnamehash}{f9541126f541e17afc2277a38c1240f2}
+      \strng{authornamehash}{f9541126f541e17afc2277a38c1240f2}
+      \strng{authorfullhash}{f9541126f541e17afc2277a38c1240f2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The demonstration of sexual dimorphism in the fossil record can provide vital information about the role that sexual selection has played in the evolution of life. However, statistically robust inferences of sexual dimorphism in fossil organisms are exceedingly difficult to establish, owing to issues of sample size, experimental control, and methodology. This is particularly so in the case of dinosaurs, for which sexual dimorphism has been posited in many species, yet quantifiable data are often lacking. This study presents the first statistical investigation of sexual dimorphism across Dinosauria. It revisits prior analyses that purport to find quantitative evidence for sexual dimorphism in nine dinosaur species. After the available morphological data were subjected to a suite of statistical tests (normality and unimodality tests and mixture modeling), no evidence for sexual dimorphism was found in any of the examined taxa, contrary to conventional wisdom. This is not to say that dinosaurs were not sexually dimorphic (phylogenetic inference suggests they may well have been), only that the available evidence precludes its detection. A priori knowledge of the sexes would greatly facilitate the assessment of sexual dimorphism in the fossil record, and it is suggested that unambiguous indicators of sex (e.g., presence of eggs, embryos, medullary bone) be used to this end.}
+      \field{issn}{0094-8373, 1938-5331}
+      \field{journaltitle}{Paleobiology}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{note}{Publisher: Cambridge University Press}
+      \field{number}{3}
+      \field{shorttitle}{Recognizing sexual dimorphism in the fossil record}
+      \field{title}{Recognizing sexual dimorphism in the fossil record: lessons from nonavian dinosaurs}
+      \field{urlday}{30}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{volume}{43}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{495\bibrangedash 507}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1017/pab.2016.51
+      \endverb
+      \verb{file}
+      \verb Mallon - 2017 - Recognizing sexual dimorphism in the fossil record.pdf:/Users/ericr/Zotero/storage/Q6UWGUUH/Mallon - 2017 - Recognizing sexual dimorphism in the fossil record.pdf:application/pdf;Snapshot:/Users/ericr/Zotero/storage/UKJQ5S3F/76D9931163D564D386E86ACF686E586D.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/journals/paleobiology/article/abs/recognizing-sexual-dimorphism-in-the-fossil-record-lessons-from-nonavian-dinosaurs/76D9931163D564D386E86ACF686E586D
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/journals/paleobiology/article/abs/recognizing-sexual-dimorphism-in-the-fossil-record-lessons-from-nonavian-dinosaurs/76D9931163D564D386E86ACF686E586D
+      \endverb
+      \keyw{to-read,!!!}
+    \endentry
+    \entry{mcelreathStatisticalRethinkingBayesian2020}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=51204ab1ac6fd3aa8b649ff12ae89bf1}{%
+           family={{McElreath}},
+           familyi={M\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Boca Raton London New York}%
+      }
+      \list{publisher}{1}{%
+        {{CRC} Press, Taylor \& Francis Group}%
+      }
+      \strng{namehash}{51204ab1ac6fd3aa8b649ff12ae89bf1}
+      \strng{fullhash}{51204ab1ac6fd3aa8b649ff12ae89bf1}
+      \strng{bibnamehash}{51204ab1ac6fd3aa8b649ff12ae89bf1}
+      \strng{authorbibnamehash}{51204ab1ac6fd3aa8b649ff12ae89bf1}
+      \strng{authornamehash}{51204ab1ac6fd3aa8b649ff12ae89bf1}
+      \strng{authorfullhash}{51204ab1ac6fd3aa8b649ff12ae89bf1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{edition}{Second edition}
+      \field{isbn}{978-0-429-63914-2 978-0-367-13991-9}
+      \field{pagetotal}{593}
+      \field{series}{Texts in statistical science series}
+      \field{shorttitle}{Statistical rethinking}
+      \field{title}{Statistical rethinking: a Bayesian course with examples in R and Stan}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Table of Contents PDF:/Users/ericr/Zotero/storage/EPBVXLAF/McElreath - 2020 - Statistical rethinking a Bayesian course with exa.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{rCore}{manual}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dcdebb6b35bff7c0568bf8c50ef8626d}{%
+           family={{R Core Team}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Vienna, Austria}%
+      }
+      \list{organization}{1}{%
+        {R Foundation for Statistical Computing}%
+      }
+      \strng{namehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{fullhash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{bibnamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authorbibnamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authornamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authorfullhash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{R: A Language and Environment for Statistical Computing}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.R-project.org/
+      \endverb
+      \verb{url}
+      \verb https://www.R-project.org/
+      \endverb
+    \endentry
+    \entry{saittaEffectSizeStatistical2020}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=451d3f1a8428f5197a5164b37a6f7cae}{%
+           family={Saitta},
+           familyi={S\bibinitperiod},
+           given={Evan\bibnamedelima T},
+           giveni={E\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50e0241ba96e9da5627af0d813cff9cd}{%
+           family={Stockdale},
+           familyi={S\bibinitperiod},
+           given={Maximilian\bibnamedelima T},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18196d09591620323fd2c82fa6f80374}{%
+           family={Longrich},
+           familyi={L\bibinitperiod},
+           given={Nicholas\bibnamedelima R},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0915f526b30a86da96b9b20f0a734265}{%
+           family={Bonhomme},
+           familyi={B\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1be4ec6689ada197204a94417edef7c}{%
+           family={Benton},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima J},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b420dc4e063e22a7443982456e3be12}{%
+           family={Cuthill},
+           familyi={C\bibinitperiod},
+           given={Innes\bibnamedelima C},
+           giveni={I\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f227ffb4e26c9351e7b99db1733731d5}{%
+           family={Makovicky},
+           familyi={M\bibinitperiod},
+           given={Peter\bibnamedelima J},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{453c30d24cd917b3282edaef527598f3}
+      \strng{fullhash}{635469be85c54a6d0835fd58b5444be6}
+      \strng{bibnamehash}{453c30d24cd917b3282edaef527598f3}
+      \strng{authorbibnamehash}{453c30d24cd917b3282edaef527598f3}
+      \strng{authornamehash}{453c30d24cd917b3282edaef527598f3}
+      \strng{authorfullhash}{635469be85c54a6d0835fd58b5444be6}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Despite reports of sexual dimorphism in extinct taxa, such claims in non-avian dinosaurs have been rare over the last decade and have often been criticized. Since dimorphism is widespread in sexually reproducing organisms today, under-reporting in the literature might suggest either methodological shortcomings or that this diverse group exhibited highly unusual reproductive biology. Univariate significance testing, especially for bimodality, is ineffective and prone to false negatives. Species recognition and mutual sexual selection hypotheses, therefore, may not be required to explain supposed absence of sexual dimorphism across the grade (a type {II} error). Instead, multiple lines of evidence support sexual selection and variation of structures consistent with secondary sexual characteristics, strongly suggesting sexual dimorphism in non-avian dinosaurs. We propose a framework for studying sexual dimorphism in fossils, focusing on likely secondary sexual traits and testing against all alternate hypotheses for variation in them using multiple lines of evidence. We use effect size statistics appropriate for low sample sizes, rather than significance testing, to analyse potential divergence of growth curves in traits and constrain estimates for dimorphism magnitude. In many cases, estimates of sexual variation can be reasonably accurate, and further developments in methods to improve sex assignments and account for intrasexual variation (e.g. mixture modelling) will improve accuracy. It is better to compare estimates for the magnitude of and support for dimorphism between datasets than to dichotomously reject or fail to reject monomorphism in a single species, enabling the study of sexual selection across phylogenies and time. We defend our approach with simulated and empirical data, including dinosaur data, showing that even simple approaches can yield fairly accurate estimates of sexual variation in many cases, allowing for comparison of species with high and low support for sexual variation.}
+      \field{day}{22}
+      \field{issn}{0024-4066}
+      \field{journaltitle}{Biological Journal of the Linnean Society}
+      \field{month}{9}
+      \field{number}{2}
+      \field{shortjournal}{Biological Journal of the Linnean Society}
+      \field{title}{An effect size statistical framework for investigating sexual dimorphism in non-avian dinosaurs and other extinct taxa}
+      \field{urlday}{27}
+      \field{urlmonth}{7}
+      \field{urlyear}{2023}
+      \field{volume}{131}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{231\bibrangedash 273}
+      \range{pages}{43}
+      \verb{doi}
+      \verb 10.1093/biolinnean/blaa105
+      \endverb
+      \verb{file}
+      \verb blaa105_suppl_supplementary_appendix.pdf:/Users/ericr/Zotero/storage/GG7RKTQT/blaa105_suppl_supplementary_appendix.pdf:application/pdf;blaa105_suppl_supplementary_appendix.pdf:/Users/ericr/Downloads/blaa105_suppl_supplementary_appendix.pdf:application/pdf;Full Text PDF:/Users/ericr/Zotero/storage/F7MNWUYY/Saitta et al. - 2020 - An effect size statistical framework for investiga.pdf:application/pdf;Snapshot:/Users/ericr/Zotero/storage/M5JITFQR/5897459.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/biolinnean/blaa105
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/biolinnean/blaa105
+      \endverb
+      \keyw{read,!!}
+    \endentry
+    \entry{rstan}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=38cdaa762a62c2f6e7ff4a46c1ce1705}{%
+           family={{Stan Development Team}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{38cdaa762a62c2f6e7ff4a46c1ce1705}
+      \strng{fullhash}{38cdaa762a62c2f6e7ff4a46c1ce1705}
+      \strng{bibnamehash}{38cdaa762a62c2f6e7ff4a46c1ce1705}
+      \strng{authorbibnamehash}{38cdaa762a62c2f6e7ff4a46c1ce1705}
+      \strng{authornamehash}{38cdaa762a62c2f6e7ff4a46c1ce1705}
+      \strng{authorfullhash}{38cdaa762a62c2f6e7ff4a46c1ce1705}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 2.32.3}
+      \field{title}{{RStan}: the {R} interface to {Stan}}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://mc-stan.org/
+      \endverb
+      \verb{url}
+      \verb https://mc-stan.org/
+      \endverb
+    \endentry
+    \entry{wilkinsonGrowthRatesAmerican1997}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b0de7e2ac332519890a3e7300eb06f45}{%
+           family={Wilkinson},
+           familyi={W\bibinitperiod},
+           given={Philip\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f4b98c5bda3926b23d3acd698d2efc03}{%
+           family={Rhodes},
+           familyi={R\bibinitperiod},
+           given={Walter\bibnamedelima E.},
+           giveni={W\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3448029ab57c780bdb651f22706122b9}
+      \strng{fullhash}{3448029ab57c780bdb651f22706122b9}
+      \strng{bibnamehash}{3448029ab57c780bdb651f22706122b9}
+      \strng{authorbibnamehash}{3448029ab57c780bdb651f22706122b9}
+      \strng{authornamehash}{3448029ab57c780bdb651f22706122b9}
+      \strng{authorfullhash}{3448029ab57c780bdb651f22706122b9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Growth rates were thought to be slower in the more northern portion of the American alligators' (Alligator mississippiensis) range (i.e., S. C.), which would have important implications on life-history traits such as age and size of sexual maturity. We used capture-recapture data from 1972 to 1993 to determine growth rates of alligators in South Carolina. Males grew (20.2 cm/yr, 0-6 yr age; 7.22 cm/yr, 6 yr age to model asymptote) faster (P {<} 0.001) than females (18.0 cm/yr, 0-6 yr age; 6.34 cm/yr, 6 yr age to model asymptote) and reached a larger mean asymptotic size (M = 3.79 ± 0.08 {SE} m, F = 2.78 ± 0.04 m). From earlier studies, South Carolina alligators reached sexual maturity at an older age and larger body size than alligators found elsewhere. Delayed breeding at larger size in South Carolina may be related more to social dominance than to growth rates. An understanding of age and size relations are essential if alligators are to be managed effectively.}
+      \field{issn}{0022-541X}
+      \field{journaltitle}{The Journal of Wildlife Management}
+      \field{note}{Publisher: [Wiley, Wildlife Society]}
+      \field{number}{2}
+      \field{title}{Growth Rates of American Alligators in Coastal South Carolina}
+      \field{urlday}{25}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{volume}{61}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{397\bibrangedash 402}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.2307/3802596
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/3802596
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/3802596
+      \endverb
+      \keyw{to-read,!!!}
+    \endentry
+    \entry{woodwardMaiasauraModelOrganism2015}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=c2eac98fa4cb8e96c2a553a54788162f}{%
+           family={Woodward},
+           familyi={W\bibinitperiod},
+           given={Holly\bibnamedelima N.},
+           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f60d51059dbcd27292ad74349a5be18a}{%
+           family={Fowler},
+           familyi={F\bibinitperiod},
+           given={Elizabeth\bibnamedelimb A.\bibnamedelimi Freedman},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=42409c00ade802bb3b066aa9ad426134}{%
+           family={Farlow},
+           familyi={F\bibinitperiod},
+           given={James\bibnamedelima O.},
+           giveni={J\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3be75b1489a0fc1358582c60ba986400}{%
+           family={Horner},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0f72bcca498ba77d65db404e1e8faf79}
+      \strng{fullhash}{3795529cb0cf051f1338938021750ca2}
+      \strng{bibnamehash}{0f72bcca498ba77d65db404e1e8faf79}
+      \strng{authorbibnamehash}{0f72bcca498ba77d65db404e1e8faf79}
+      \strng{authornamehash}{0f72bcca498ba77d65db404e1e8faf79}
+      \strng{authorfullhash}{3795529cb0cf051f1338938021750ca2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Fossil bone microanalyses reveal the ontogenetic histories of extinct tetrapods, but incomplete fossil records often result in small sample sets lacking statistical strength. In contrast, a histological sample of 50 tibiae of the hadrosaurid dinosaur Maiasaura peeblesorum allows predictions of annual growth and ecological interpretations based on more histologic data than any previous large sample study. Tibia length correlates well (R2{>}0.9) with diaphyseal circumference, cortical area, and bone wall thickness, thereby allowing longitudinal predictions of annual body size increases based on growth mark circumference measurements. With an avian level apposition rate of 86.4 μm/day, Maiasaura achieved over half of asymptotic tibia diaphyseal circumference within its first year. Mortality rate for the first year was 89.9\% but a seven year period of peak performance followed, when survivorship (mean mortality rate=12.7\%) was highest. During the third year of life, Maiasaura attained 36\% (x=1260 kg) of asymptotic body mass, growth rate was decelerating (18.2 μm/day), cortical vascular orientation changed, and mortality rate briefly increased. These transitions may indicate onset of sexual maturity and corresponding reallocation of resources to reproduction. Skeletal maturity and senescence occurred after 8 years, at which point the mean mortality rate increased to 44.4\%. Compared with Alligator, an extant relative, Maiasaura exhibits rapid cortical increase early in ontogeny, while Alligator cortical growth is much lower and protracted throughout ontogeny. Our life history synthesis of Maiasaura utilizes the largest histological sample size for any extinct tetrapod species thus far, demonstrating how large sample microanalyses strengthen paleobiological interpretations.}
+      \field{issn}{0094-8373, 1938-5331}
+      \field{journaltitle}{Paleobiology}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{note}{Publisher: Cambridge University Press}
+      \field{number}{4}
+      \field{shorttitle}{Maiasaura, a model organism for extinct vertebrate population biology}
+      \field{title}{Maiasaura, a model organism for extinct vertebrate population biology: a large sample statistical assessment of growth dynamics and survivorship}
+      \field{urlday}{3}
+      \field{urlmonth}{2}
+      \field{urlyear}{2024}
+      \field{volume}{41}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{503\bibrangedash 527}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1017/pab.2015.19
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/ericr/Zotero/storage/K9TDNEQG/Woodward et al. - 2015 - Maiasaura, a model organism for extinct vertebrate.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/journals/paleobiology/article/maiasaura-a-model-organism-for-extinct-vertebrate-population-biology-a-large-sample-statistical-assessment-of-growth-dynamics-and-survivorship/288407BA0A91914480A0531529F050EF
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/journals/paleobiology/article/maiasaura-a-model-organism-for-extinct-vertebrate-population-biology-a-large-sample-statistical-assessment-of-growth-dynamics-and-survivorship/288407BA0A91914480A0531529F050EF
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

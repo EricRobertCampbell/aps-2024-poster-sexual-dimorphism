@@ -1,0 +1,18 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'paper.blg'
+[37] biber-darwin:340> INFO - === Sun Feb 11, 2024, 07:43:06
+[48] Biber.pm:419> INFO - Reading 'paper.bcf'
+[93] Biber.pm:979> INFO - Found 13 citekeys in bib section 0
+[101] Biber.pm:4419> INFO - Processing section 0
+[107] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[109] bibtex.pm:1713> INFO - LaTeX decoding ...
+[133] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[204] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[204] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[204] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[204] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[215] bbl.pm:660> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
+[224] bbl.pm:763> INFO - Output to paper.bbl
+[224] Biber.pm:131> WARN - ISBN '978-0-429-63914-2 978-0-367-13991-9' in entry 'mcelreathStatisticalRethinkingBayesian2020' is invalid - run biber with '--validate_datamodel' for details.
+[224] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/86/1fgck35j5s9g7_r3_8y8txcc0000gn/T/biber_tmp_c_cd/f4d088b3f9f145b5c3058da33afd57d4_16015.utf8, line 411, warning: 21 characters of junk seen at toplevel
+[224] Biber.pm:133> INFO - WARNINGS: 2

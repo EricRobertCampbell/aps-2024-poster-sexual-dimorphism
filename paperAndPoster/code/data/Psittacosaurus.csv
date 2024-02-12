@@ -1,0 +1,45 @@
+﻿Specimen,Femur length (mm),Age estimate (years),Age estimate shifted (years),Femur length cubed (mm3),Largest specimen (ZMNH M8138) femur length cubed (mm3),Largest specimen (ZMNH M8138) body mass (kg),Femur length cubed/femur length cubed of largest specimen (ZMNH M8138),Estimated body mass (kg),We added 0.5 to all datapoints in order to more easily fit the curve when specimens have 0 LAGs
+IVPP 14155,31,0,0.5,29791,8120601,25.96,0.003668571,0.095236099,"We used ZMNH M8138 as the largest specimen and calculated LPM R00117 based off of this, even though both have the same circumference, because the femurs appear to be 1 cm different in length. We did this to be consistent with the way we calculated body mass of all the other specimens using DME."
+D2156,32.5,0,0.5,34328.125,,,0.004227289,0.109740415,"Table 1 lists n=34 for this specimen, but lists a range of femur lengths from 31-34 mm, so we coded 1 specimen with a femur length at the midpoint of this range"
+IVPP 12704,30,0,0.5,27000,,,0.003324877,0.086313809,"For specimens with age estimates <1, we coded as 0 years prior to shift"
+PKUVP V1058,52,0,0.5,140608,,,0.017314975,0.44949674,"Table 1 lists n=2 for this specimen with both femur lengths in parentheses equalling 52 mm, so we coded 2 specimens with femur lengths of 52 mm"
+PKUVP V1058,52,0,0.5,140608,,,0.017314975,0.44949674,
+LPM R00142,34,1,1.5,39304,,,0.004840036,0.125647331,"Table 1 lists n=4 for this specimen, but only presents one femur length in parentheses of 34 mm, so we only coded 1 specimen at 34 mm"
+IVPP V14341,53,1,1.5,148877,,,0.018333249,0.475931144,
+IVPP V12704,48,1,1.5,110592,,,0.013618696,0.35354136,
+LPM R00137,44.6,1,1.5,88716.536,,,0.010924873,0.283609708,
+LPM R00118,64,2,2.5,262144,,,0.032281355,0.838023964,
+IVPP V14341,57,2,2.5,185193,,,0.022805332,0.592026413,
+IVPP V14341,62,2,2.5,238328,,,0.029348567,0.761888791,
+IVPP V14341,68,2,2.5,314432,,,0.038720287,1.005178646,
+IVPP V14341,72,2,2.5,373248,,,0.045963101,1.193202089,
+LPM R00142,52,2,2.5,140608,,,0.017314975,0.44949674,
+LPM R00141,85,3,3.5,614125,,,0.07562556,1.963239543,
+LPM R00132,79.7,3,3.5,506261.573,,,0.06234287,1.618420907,
+LPM R00136,103,3,3.5,1092727,,,0.134562331,3.493238114,
+IVPP uncat.,76,3,3.5,438976,,,0.054057083,1.403321867,
+LPM R00121,73,3,3.5,389017,,,0.047904952,1.24361255,
+LPM R00124,100,4,4.5,1000000,,,0.123143595,3.196807724,
+LPM R00140,101,4,4.5,1030301,,,0.126874969,3.293674195,
+PKUVP V1057,98,4,4.5,941192,,,0.115901766,3.008809855,
+LPM R00137,119,5,5.5,1685159,,,0.207516537,5.387129307,
+LPM R00133,113,5,5.5,1442897,,,0.177683524,4.612664274,
+LPM R00119,113,5,5.5,1442897,,,0.177683524,4.612664274,
+LPM R00135,107.9,5,5.5,1256216.039,,,0.154694959,4.015881136,
+LPM R00143,110.7,5,5.5,1356572.043,,,0.167053158,4.336699985,
+IVPP V12617,139,6,6.5,2685619,,,0.330716778,8.585407563,"The table does not provide a single value or a value in parentheses for femur length, so we took the midpoint of the range reported"
+LPM R00133,133,6,6.5,2352637,,,0.289712178,7.520928133,
+LPM R00126,130,6,6.5,2197000,,,0.270546478,7.02338657,
+D2156,132.5,6,6.5,2326203.125,,,0.286457015,7.436424118,"The table does not provide a single value or a value in parentheses for femur length, so we took the midpoint of the range reported"
+LPM R00138,138,7,7.5,2628072,,,0.323630234,8.401440869,
+PKUVP V1053,150,7,7.5,3375000,,,0.415609633,10.78922607,
+PKUVP V1056,136,7,7.5,2515456,,,0.309762295,8.04142917,
+LPM R00128,135,7,7.5,2460375,,,0.302979422,7.865345804,
+JZMP V11,165,8,8.5,4492125,,,0.553176421,14.3604599,
+PKUVP 1054,165,8,8.5,4492125,,,0.553176421,14.3604599,
+LPM R00122,155.3,8,8.5,3745539.377,,,0.461239184,11.97376921,
+PKUVP V1055,148,8,8.5,3241792,,,0.399205921,10.36338571,
+LHPV1,172,9,9.5,5088448,,,0.626609779,16.26678987,
+ZMNH M8137,190,9,9.5,6859000,,,0.844641918,21.92690418,
+LPM R00117,200,10,10.5,8000000,,,0.985148759,25.57446179,"The table does not provide a single value or a value in parentheses for femur length, so we took the midpoint of the range reported"
+ZMNH M8138,201,11,11.5,8120601,,,1,25.96,"The table does not provide a single value or a value in parentheses for femur length, so we took the midpoint of the range reported"

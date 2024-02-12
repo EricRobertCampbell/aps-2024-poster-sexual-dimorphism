@@ -1,2 +1,30 @@
 .DS_Store
 **/venv
+
+# latex temporary files
+*.aux
+*.log
+*.toc
+*.fls
+*.run.xml
+
+# PDF output - usually a bad idea to keep this in Git
+paperAndPoster/*.pdf
+paperAndPoster/*.docx
+
+# Latexmk
+*.fdb_latexmk
+
+# SyncTeX
+*.synctex.gz
+
+# LaTeX Beamer
+*.snm
+*.vrb
+*.nav
+*.out
+
+# BibTeX
+*.bbl
+*.blg
+*.bcf

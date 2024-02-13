@@ -79,4 +79,4 @@ p <- ggplot(summary_df, aes(sample_size, mean)) +
     annotate('label', label = "Actual Level", x = 4.5, y = 0.7, size = unit(8, 'pt'), fill = 'white', label.size = NA) +
     labs(x = "Total Sample Size", y = "Dimorphism Level (m)", title = "Dimorphism Level (Mean and 95% Credible Interval) and Sample Size") +
     custom_theme()
-ggsave("../images/alligatorSampleSize.png", plot = p, width = 15, height = 8)
+ggsave_with_defaults(generate_filename("alligatorSampleSize.png"), plot = p)

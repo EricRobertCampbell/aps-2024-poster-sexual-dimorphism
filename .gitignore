@@ -8,9 +8,10 @@
 *.fls
 *.run.xml
 
-# PDF output - usually a bad idea to keep this in Git
+# output - usually a bad idea to keep this in Git
 paperAndPoster/*.pdf
 paperAndPoster/*.docx
+!paperAndPoster/*-edited.docx
 
 # Latexmk
 *.fdb_latexmk

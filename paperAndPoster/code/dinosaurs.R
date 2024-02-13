@@ -69,7 +69,7 @@ p <- ggplot() +
     labs(x = "Age (years)", y = "Mass (kg)", title = "Prior 95% Quantiles") +
     custom_theme()
 
-ggsave("../images/maiasauraPrior.png", plot = p, width = 15, height = 8)
+ggsave_with_defaults(generate_filename("maiasauraPrior.png"), plot = p)
 
 # now do the regression
 maiasaura$residual <- resid(population_fit)
@@ -122,15 +122,17 @@ for (i in 1:100) {
         geom_line(data = data.frame(age = curve_ages, mass = curve_mass_large, sex = "L"), mapping = aes(age, mass, colour = sex), alpha = 0.1)
 
 }
-p <- p + labs(title = "Maiasaura peeblesorum Data and Posterior Growth Curves")
-ggsave('../images/maiasauraPosterior.png', plot = p, width = 15, height = 8)
+p <- p +
+    labs(title = "Maiasaura peeblesorum Data and Posterior Growth Curves") +
+    theme(legend.position = c(0.7, 0.3), legend.background = element_rect(fill = 'white'))
+ggsave_with_defaults(generate_filename('maiasauraPosterior.png'), plot = p)
 
 # actual amount of dimorphism
 p <- ggplot(data.frame(x = maiasaura_samples[['difference']]), aes(x)) +
     geom_density(aes(y = after_stat(density))) +
     labs(x = expression(L[l] - L[s]), y = "Density", title = "Posterior Distribution for Maiasaura Sexual Dimorphism") +
     custom_theme()
-ggsave('../images/maiasauraDimorphism.png', plot = p, width = 15, height = 8)
+ggsave_with_defaults(generate_filename('maiasauraDimorphism.png'), plot = p)
 
 
 
@@ -205,7 +207,7 @@ p <- ggplot() +
     labs(x = "Age (years)", y = "Mass (kg)", title = "Prior 95% Quantiles") +
     custom_theme()
 
-ggsave("../images/psittacosaurusPrior.png", plot = p, width = 15, height = 8)
+ggsave_with_defaults(generate_filename("psittacosaurusPrior.png"), plot = p)
 
 # now fit the psittacosaurus data
 psittacosaurus$residual <- resid(fit.population)
@@ -259,14 +261,16 @@ for (i in 1:100) {
         geom_line(data = data.frame(age = curve_ages, mass = curve_mass_large, sex = "L"), mapping = aes(age, mass, colour = sex), alpha = 0.1)
 
 }
-p <- p + labs(title = "Psittacosaurus lujiatunensis Data and Posterior Growth Curves")
-ggsave("../images/psittacosaurusPosterior.png", plot = p, width = 15, height = 8)
+p <- p + 
+    labs(title = "Psittacosaurus lujiatunensis Data and Posterior Growth Curves") +
+    theme(legend.position = c(0.7, 0.5), legend.background = element_rect(fill = 'white'))
+ggsave_with_defaults(generate_filename("psittacosaurusPosterior.png"), plot = p)
 
 p <- ggplot(data.frame(x = psittacosaurus_samples[['difference']]), aes(x)) +
     geom_density(aes(y = after_stat(density))) +
     labs(x = expression(L[l] - L[s]), y = "Density", title = "Posterior Distribution for Psittacosaurus Sexual Dimorphism") +
     custom_theme()
-ggsave('../images/psittacosaurusDimorphism.png', width = 15, height = 8)
+ggsave_with_defaults(generate_filename('psittacosaurusDimorphism.png'), plot = p)
 
 
 
@@ -341,7 +345,7 @@ p <- ggplot() +
     geom_ribbon(data = range_df, mapping = aes(x = age, ymin = lower, ymax = upper), alpha = 0.2) +
     labs(x = "Age (years)", y = "Mass (kg)", title = "Prior 95% Quantiles") +
     custom_theme()
-ggsave('../images/tyrannosaurPrior.png', plot = p, width = 15, height = 8)
+ggsave_with_defaults(generate_filename('tyrannosaurPrior.png'), plot = p)
 
 # now fit the tyrannosaurus data
 tyrannosaurus$residual <- resid(fit.population)
@@ -394,14 +398,16 @@ for (i in 1:100) {
         geom_line(data = data.frame(age = curve_ages, mass = curve_mass_large, sex = "L"), mapping = aes(age, mass, colour = sex), alpha = 0.1)
 
 }
-p <- p + labs(title = "Tyrannosaurus rex Data and Posterior Growth Curves")
-ggsave('../images/tyrannosaurPosterior.png', plot = p, width = 15, height = 8)
+p <- p + 
+    labs(title = "Tyrannosaurus rex Data and Posterior Growth Curves") +
+    theme(legend.position = c(0.5, 0.5), legend.background = element_rect(fill = 'white'))
+ggsave_with_defaults(generate_filename('tyrannosaurPosterior.png'), plot = p)
 
 p <- ggplot(data.frame(x = tyrannosaurus_samples[['difference']]), aes(x)) +
     geom_density(aes(y = after_stat(density))) +
     labs(x = expression(L[l] - L[s]), y = "Density", title = "Posterior Distribution for Tyrannosaurus Sexual Dimorphism") +
     custom_theme()
-ggsave('../images/tyrannosaurDimorphism.png', plot = p, width = 15, height = 8)
+ggsave_with_defaults(generate_filename('tyrannosaurDimorphism.png'), plot = p)
 
 
 
@@ -444,4 +450,4 @@ p <- ggplot(dimorphism_df, aes(x = x, colour = species)) +
     scale_linetype_manual(values = c("Saitta et al (2020)" = 'dashed')) +
     scale_x_continuous(labels = scales::percent) +
     labs(x = "Percent Dimorphism", y = "Density", title = "A Comparison of Different Distributions of Dimorphism", colour = "Species", fill = "Species", linetype = NULL)
-ggsave("../images/combinedDimorphism.png", plot = p, width = 15, height = 8)
+ggsave_with_defaults(generate_filename("combinedDimorphism.png"), plot = p)

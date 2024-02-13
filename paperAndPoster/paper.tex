@@ -12,7 +12,7 @@
 \usepackage{booktabs}
 \usepackage{xurl}
 
-\title{Using Bayesian Regression to Quantify Sexual Dimorphism in Extinct Taxa}
+\title{Using Bayesian Regression to Quantify Sexual Dimorphism in Dinosaurs}
 \author{Eric Campbell}
 \begin{document}
 \maketitle
@@ -30,7 +30,17 @@ There are several analytical methods which are commonly used. However, each of t
 
 However, a proposed method in \cite{saittaEffectSizeStatistical2020} attempts to sidestep these difficulties by explicitly constructing growth curves for the different sexes. Herein is proposed a modification to that method in which Bayesian regression is used to recover a distribution of possible growth curves for each sex and subsequently applied to calculate the level of dimorphism.
 
+
 \section{Methods}
+Bayesian regression is quite different from classical regression. To estimate a parameter, there needs to be a \emph{prior} representing the information that you have before seeing the data. You can then calculate the \emph{likelihood} of the data that you observed for the different parameter values. The optimal combination of the prior and the likelihood is given by Bayes' Theorem and is termed the \emph{posterior}. In general, the result of a Bayesian analysis will be a probability distribution, not a single number \parencite{mcelreathStatisticalRethinkingBayesian2020}. An illustration of this method is shown in Figure \ref{fig:bayesianExplanation}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = \textwidth]{images/bayesianExample.png}
+	\caption{To estimate human height, we start with what we know before seeing any data --- the \emph{prior}. Then a sample of heights is collected and the \emph{likelihood} of that sample for each of the parameter values is calculated. The combination of those, our final belief about the value of the parameter, is the \emph{posterior} distribution.}
+	\label{fig:bayesianExplanation}
+\end{figure}
+
 The modification to the method in \cite{saittaEffectSizeStatistical2020} is presented below.
 
 \begin{table}[H]
@@ -196,12 +206,12 @@ From this, we can see strong evidence for the \maia{} and \psit{} dimorphism, wh
 
 As shown above, the modification of the method in \cite{saittaEffectSizeStatistical2020} using Bayesian regression to calculate the posterior distributions for sex-specific growth curves and the level of sexual dimorphism is generally reliable and useful way to quantify dimorphism in extinct populations. While it shares some weakness with with the original method, it also has several notable advantages. One is that by carrying uncertainty through all parts of modelling, the final result contains more information about the process \parencite{mcelreathStatisticalRethinkingBayesian2020}. Another is that by incorporating prior knowledge, we can constrain our final result to be biologically plausible.
 
-Despite these advantages, there remain many area in which this method could be improved. The most critical, as noted in \cite{saittaEffectSizeStatistical2020}, is sex determination. As shown by Figure \ref{fig:alligatorSexPredictionError} sex determination accuracy was a strong predictor of the error in the level of dimorphism. There are two complementary paths which should be taken towards alleviating this issue. The first is the incorporation of the uncertainty in sex determination into the posterior curves generated. At the moment we behave as though the sex that we predict is correct, with no uncertainty, when the reality is that this is a significant source of error. This would result in widening the posterior distributions for the levels of dimorphism, but would not address the underlying issue. For that, we should look at alternate means of predicting sex, such as cluster analysis involving traits other than the one that we are looking at.
+Despite these advantages, there remain many areas in which this method could be improved. The most critical, as noted in \cite{saittaEffectSizeStatistical2020}, is sex determination. As shown by Figure \ref{fig:alligatorSexPredictionError} sex determination accuracy was a strong predictor of the error in the level of dimorphism. There are two complementary paths which should be taken towards alleviating this issue. The first is the incorporation of the uncertainty in sex determination into the posterior curves generated. At the moment we behave as though the sex that we predict is correct, with no uncertainty, when the reality is that this is a significant source of error. This would result in widening the posterior distributions for the levels of dimorphism, but would not address the underlying issue. For that, we should look at alternate means of predicting sex, such as cluster analysis involving traits other than the one that we are looking at.
 
 Determining levels of sexual dimorphism when both sex and size determination are difficult is naturally a difficult problem, and the method here, while offering an incremental improvement over existing methods, is certainly no panacea. Further efforts, both on the statistical and palaeontological side of the equation, will be required in order to improve our understanding of sexual dimorphism within extinct taxa.
 
-For all data and analyses used here, see \url{https://github.com/EricRobertCampbell/aps-2024-poster-sexual-dimorphism}.
 
 \printbibliography[title=Bibliography]
+For all data and code used here, along with additional analyses, see \url{https://github.com/EricRobertCampbell/aps-2024-poster-sexual-dimorphism}.
 
 \end{document}

@@ -20,6 +20,6 @@ p <- ggplot(combined_data, aes(age, length)) +
     scale_colour_grey() +
     scale_fill_grey() +
     custom_theme() +
-    labs(x = "Age (years)", y = "Length (m)", title = "Alligator Population and Curve", colour = "Actual Sex", shape = "Actual Sex")
-ggsave("../images/alligatorMethod.png", plot = p,  width = 15, height = 8)
-print("Done")
+    labs(x = "Age (years)", y = "Length (m)", title = "Alligator Population and Curve", colour = "Actual Sex", shape = "Actual Sex") +
+    theme(legend.position = c(0.85, 0.25), legend.background = element_rect(fill = 'white'))
+ggsave_with_defaults(generate_filename("alligatorMethod.png"), plot = p)

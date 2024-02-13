@@ -116,3 +116,17 @@ generate_fake_male_params <- function(E) {
         sigma = actual_female_params[['sigma']] + E * (actual_male_params[['sigma']] - actual_female_params[['sigma']])
     )
 }
+
+ggsave_with_defaults <- function(filename, plot, width = 15, height = 8, dpi = 600, ...) {
+  ggsave(
+    filename = filename,
+    plot = plot,
+    width = width,
+    height = height,
+    dpi = dpi,
+    ...
+  )
+  sprintf("Done saving %s", filename)
+}
+
+generate_filename <- function(name) sprintf("../images/%s", name)

@@ -13,7 +13,7 @@ all: $(PDF_FILE) $(DOCX_FILE)
 
 paper: $(PDF_FILE) $(DOCX_FILE)
 
-poster: $(POSTER_FILE)
+poster: $(POSTER_FILE) $(PDF_FILE)
 
 $(POSTER_FILE): $(POSTER_TEX) $(BIB_FILE) $(IMAGES_DIR)
 	latexmk -pdf $(POSTER_TEX)

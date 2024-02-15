@@ -1,17 +1,29 @@
 \documentclass[landscape]{tikzposter} % See Section 3
-\usepackage[b0paper]{geometry}
-\title{Title} \institute{Inst} % See Section 4.1
-\author{Auth} \titlegraphic{Logo}
+\input{common.tex}
+
+\title{\actualTitle} % See Section 4.1
+\author{Eric Campbell \\ \texttt{eric.robert.campbell@gmail.com}} 
 \usetheme{Basic} % See Section 5
 
 \begin{document}
 \maketitle % See Section 4.1
-\block{BlocktitleA}{Blocktext} % See Section 4.2
+\block{Abstract}{Put abstract here} % See Section 4.2
 \begin{columns} % See Section 4.4
-\column{0.3} % See Section 4.4
+\column{0.333333333} % See Section 4.4
 \block{BlocktitleB}{Blocktext}
-\column{0.7}
+
+\column{0.333333333}
 \block{BlocktitleC}{Blocktext}
+
+\column{0.333333333}
+\block{Results}{Put Results Here}
+\block{Next Steps}{Ideas for next steps here}
+\block{Bibliography}{
+    % \input{paper.bbl}
+
+    For all data and code used here, along with additional analyses, see \url{https://github.com/EricRobertCampbell/aps-2024-poster-sexual-dimorphism}.
+}
 \note{Notetext} % See Section 4.3
+
 \end{columns}
 \end{document}

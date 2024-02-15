@@ -1,28 +1,22 @@
 \documentclass[letterpaper]{article}
 \usepackage[top=1in, bottom=1.25in, inner=1.25in, outer=1.25in]{geometry}
-\usepackage[style=authoryear-comp]{biblatex}
+\usepackage[style=authoryear-comp, backend=biber]{biblatex}
 \addbibresource{bibliography.bib}
 \usepackage{float}
-\usepackage{amsmath}
 \usepackage{tabularx}
 \usepackage{siunitx}
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{subcaption}
 \usepackage{booktabs}
-\usepackage{xurl}
+\input{common.tex}
 
-\title{Using Bayesian Regression to Quantify Sexual Dimorphism in Dinosaurs}
+\title{\actualTitle}
 \author{Eric Campbell \\ \texttt{eric.robert.campbell@gmail.com}}
 \date{}
 \begin{document}
 \maketitle
 
-\newcommand{\species}[1]{\textit{#1}}
-\newcommand{\tyran}{\species{Tyrannosaurus rex}{}}
-\newcommand{\psit}{\species{Psittacosurus lujiatunensis}{}}
-\newcommand{\maia}{\species{Maiasaura peeblesorum}{}}
-\newcommand{\normal}[2]{\ensuremath{\mathcal{N}\left(#1, #2\right)}}
 
 \section{Introduction}
 Sexual dimorphism is the difference in size, colour, or presence of a feature between different sexes in a species. For instance, generally human males are larger than females, male mallard ducks are colourfully ornamented while females are drab, and male deer have antlers while females do not. Sexual dimorphism is very common in extant species, but detection of sexual dimorphism in extinct taxa, especially vertebrates, has been more challenging. Essentially, there are two difficulties in determining sexual dimorphism in extinct taxa: the `sexual' part and the `dimorphism' part. Determining the sex of the individual fossil, in the absence of rare features (such as medullary bone or bacula) is extremely challenging \parencite{saittaEffectSizeStatistical2020}. Similarly, determining the mass or size of a feature from a fossil (such as those of dinosaurs) can be difficult \parencite[p.~126]{brusatte2012}. When trying to determine the level of sexual dimorphism, these problems compound each other.

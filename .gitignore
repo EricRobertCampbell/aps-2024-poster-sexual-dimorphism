@@ -9,9 +9,9 @@
 *.run.xml
 
 # output - usually a bad idea to keep this in Git
-paperAndPoster/*.pdf
-paperAndPoster/*.docx
-!paperAndPoster/*-edited.docx
+paperAndPoster/paper.pdf
+paperAndPoster/poster.pdf
+paperAndPoster/paper.docx
 
 # Latexmk
 *.fdb_latexmk

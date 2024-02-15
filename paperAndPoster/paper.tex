@@ -13,7 +13,8 @@
 \usepackage{xurl}
 
 \title{Using Bayesian Regression to Quantify Sexual Dimorphism in Dinosaurs}
-\author{Eric Campbell}
+\author{Eric Campbell \\ \texttt{eric.robert.campbell@gmail.com}}
+\date{}
 \begin{document}
 \maketitle
 
@@ -66,10 +67,10 @@ In both methods, the amount of dimorphism is calculated as the difference in the
 Validating the method began with a simulated population of American alligators (\species{Alligator mississippiensis}). The original von Bertalanffy growth curves were determined in \cite{wilkinsonGrowthRatesAmerican1997} and a simplified model using a constant standard deviation (rather than sex-specific standard deviation of the form $\alpha \log(\text{mean mass at age}) + \beta$) was used to generate different samples. The final model was
 
 \begin{align*}
-\text{Length}_{ m / f } &\sim \mathcal{N}\left(\mu_{ m / f }, \sigma\right) \\
+\text{Length}_{ m / f } &\sim \mathcal{N}\left(\mu_{ m / f }, \sigma_{m/f}\right) \\
 \mu_m &= 3.79 * \left(1 - 0.94e^{-0.0695 \ast \text{age}}\right) \\
 \mu_f &= 2.78 * \left(1 - 0.91e^{-0.0926 \ast \text{age}}\right) \\
-\sigma &= 0.25
+\sigma_{m/f} &= 0.25
 \end{align*}
 
 For the von Bertalanffy equation
@@ -94,7 +95,7 @@ the parameter $L$ is the asymptotic length, and so the actual level of sexual di
 L_{ m/f } &\sim \normal{\text{population L}}{0.5} \\
 A_{ m/f } &\sim \normal{\text{population A}}{0.025} \\
 K_{ m/f } &\sim \normal{\text{population K}}{0.05} \\
-\sigma &\sim \normal{0.25}{0.05} \\
+\sigma_{m/f} &\sim \normal{0.25}{0.05} \\
 \end{align*}
 
 Since the priors used for the male and female parameters are identical (and initially have means equal to the population-level parameters), the results are slightly biased toward a finding of minimal or no sexual dimorphism.
@@ -204,7 +205,7 @@ From this, we can see strong evidence for the \maia{} and \psit{} dimorphism, wh
 
 \section{Discussion}
 
-As shown above, the modification of the method in \cite{saittaEffectSizeStatistical2020} using Bayesian regression to calculate the posterior distributions for sex-specific growth curves and the level of sexual dimorphism is generally reliable and useful way to quantify dimorphism in extinct populations. While it shares some weakness with with the original method, it also has several notable advantages. One is that by carrying uncertainty through all parts of modelling, the final result contains more information about the process \parencite{mcelreathStatisticalRethinkingBayesian2020}. Another is that by incorporating prior knowledge, we can constrain our final result to be biologically plausible.
+As shown above, the modification of the method in \cite{saittaEffectSizeStatistical2020} using Bayesian regression to calculate the posterior distributions for sex-specific growth curves and the level of sexual dimorphism is a generally reliable and useful way to quantify dimorphism in extinct populations. While it shares some weakness with the original method, it also has several notable advantages. One is that by carrying uncertainty through all parts of modelling, the final result contains more information about the process \parencite{mcelreathStatisticalRethinkingBayesian2020}. Another is that by incorporating prior knowledge, we can constrain our final result to be biologically plausible.
 
 Despite these advantages, there remain many areas in which this method could be improved. The most critical, as noted in \cite{saittaEffectSizeStatistical2020}, is sex determination. As shown by Figure \ref{fig:alligatorSexPredictionError} sex determination accuracy was a strong predictor of the error in the level of dimorphism. There are two complementary paths which should be taken towards alleviating this issue. The first is the incorporation of the uncertainty in sex determination into the posterior curves generated. At the moment we behave as though the sex that we predict is correct, with no uncertainty, when the reality is that this is a significant source of error. This would result in widening the posterior distributions for the levels of dimorphism, but would not address the underlying issue. For that, we should look at alternate means of predicting sex, such as cluster analysis involving traits other than the one that we are looking at.
 

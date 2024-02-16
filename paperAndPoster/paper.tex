@@ -1,6 +1,6 @@
 \documentclass[letterpaper]{article}
 \usepackage[top=1in, bottom=1.25in, inner=1.25in, outer=1.25in]{geometry}
-\usepackage[style=authoryear-comp, backend=biber]{biblatex}
+\usepackage[style=authoryear-comp]{biblatex}
 \addbibresource{bibliography.bib}
 \usepackage{float}
 \usepackage{tabularx}
@@ -84,8 +84,8 @@ the parameter $L$ is the asymptotic length, and so the actual level of sexual di
  A Bayesian model with wide priors centred around the population-level curve values was used to recover the values \parencite{rCore, rstan}.
 
 \begin{align*}
-\text{Length}_{m/f,i} &\sim \normal{\mu_{m/f, i}}{\sigma} \\
-\mu_{m/f, i} &= \text{von Betlananffy}(\text{age}_i, L_{ m/f }, A_{ m/f }, K_{ m/f }) \\
+\text{Length}_{m/f,i} &\sim \normal{\mu_{m/f, i}}{\sigma_{m / f}} \\
+\mu_{m/f, i} &= \text{von Bertalanffy}(\text{age}_i, L_{ m/f }, A_{ m/f }, K_{ m/f }) \\
 L_{ m/f } &\sim \normal{\text{population L}}{0.5} \\
 A_{ m/f } &\sim \normal{\text{population A}}{0.025} \\
 K_{ m/f } &\sim \normal{\text{population K}}{0.05} \\

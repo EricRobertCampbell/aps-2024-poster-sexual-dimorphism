@@ -1,5 +1,9 @@
 \documentclass[landscape]{tikzposter} % See Section 3
+\usepackage[style=authoryear-comp, locallabelwidth]{biblatex}
+\usepackage{anyfontsize}
 \input{common.tex}
+
+\renewcommand*{\bibfont}{\tiny}
 
 \title{\actualTitle} % See Section 4.1
 \author{Eric Campbell \\ \texttt{eric.robert.campbell@gmail.com}} 
@@ -19,7 +23,22 @@
 \block{Results}{Put Results Here}
 \block{Next Steps}{Ideas for next steps here}
 \block{Bibliography}{
-    % \input{paper.bbl}
+    \makeatletter
+    \def\blx@bblfile@biber{%
+      \blx@secinit
+      \begingroup
+      \blx@bblstart
+        \input{poster.bbl}
+      \blx@bblend
+      \endgroup
+      \csnumgdef{blx@labelnumber@\the\c@refsection}{0}}
+    \makeatother
+    \begin{minipage}{\linewidth}
+        \begin{center}\mbox{}\vspace{0pt}
+            \printbibliography[heading=none]
+        \end{center}
+        \vspace{\baselineskip}
+    \end{minipage}
 
     For all data and code used here, along with additional analyses, see \url{https://github.com/EricRobertCampbell/aps-2024-poster-sexual-dimorphism}.
 }

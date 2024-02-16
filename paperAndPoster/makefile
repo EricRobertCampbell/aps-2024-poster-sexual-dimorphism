@@ -15,8 +15,14 @@ paper: $(PDF_FILE) $(DOCX_FILE)
 
 poster: $(POSTER_FILE) $(PDF_FILE)
 
-$(POSTER_FILE): $(POSTER_TEX) $(BIB_FILE) $(IMAGES_DIR)
+$(POSTER_FILE): poster.bbl $(POSTER_TEX) $(BIB_FILE) $(IMAGES_DIR)
 	latexmk -pdf $(POSTER_TEX)
+
+poster.bbl: paper.bbl
+	cp paper.bbl poster.bbl
+
+paper.bbl: $(TEX_FILE)
+	biber $(TEX_FILE)
 
 # Target: paper.pdf
 $(PDF_FILE): $(TEX_FILE) $(BIB_FILE) $(IMAGES_DIR)
@@ -28,5 +34,7 @@ $(DOCX_FILE): $(TEX_FILE) $(BIB_FILE) $(IMAGES_DIR)
 
 # Phony target to clean up temporary files
 clean:
-	latexmk -c
+	latexmk -C
+	rm *.bbl
+	rm *.run.xml
 	rm -f $(DOCX_FILE)

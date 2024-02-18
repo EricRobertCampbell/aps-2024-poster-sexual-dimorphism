@@ -27,7 +27,12 @@ p <- ggplot(df, aes(height, density, group = type, colour = type)) +
     custom_theme() +
     labs(x = "Height (cm)", y = "Density", colour = "Type") +
     scale_y_continuous(labels = NULL) +
-    scale_colour_grey() +
+    # scale_colour_grey() +
     theme(legend.position = c(0.8, 0.8), legend.background = element_rect(fill = 'white'))
 
-ggsave_with_defaults(generate_filename("bayesianExample.png"), plot = p)
+paper_image <- p + paper_colours()
+poster_image <- p + 
+    poster_colours() +
+
+ggsave_with_defaults(generate_filename("bayesianExample.png"), plot = paper_image)
+ggsave_with_defaults(generate_filename("bayesianExample-poster.png"), plot = poster_image)

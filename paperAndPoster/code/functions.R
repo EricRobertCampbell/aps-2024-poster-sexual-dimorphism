@@ -130,3 +130,6 @@ ggsave_with_defaults <- function(filename, plot, width = 15, height = 8, dpi = 6
 }
 
 generate_filename <- function(name) sprintf("../images/%s", name)
+
+paper_colours <- function() scale_colour_grey()
+poster_colours <- function() scale_fill_viridis_d()

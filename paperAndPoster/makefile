@@ -13,16 +13,10 @@ all: $(PDF_FILE) $(DOCX_FILE)
 
 paper: $(PDF_FILE) $(DOCX_FILE)
 
-poster: $(POSTER_FILE) $(PDF_FILE)
+poster: $(POSTER_FILE)
 
-$(POSTER_FILE): poster.bbl $(POSTER_TEX) $(BIB_FILE) $(IMAGES_DIR)
-	latexmk -pdf $(POSTER_TEX)
-
-poster.bbl: paper.bbl
-	cp paper.bbl poster.bbl
-
-paper.bbl: $(TEX_FILE)
-	biber $(TEX_FILE)
+$(POSTER_FILE): $(POSTER_TEX) $(BIB_FILE) $(IMAGES_DIR)
+	latexmk $(POSTER_TEX)
 
 # Target: paper.pdf
 $(PDF_FILE): $(TEX_FILE) $(BIB_FILE) $(IMAGES_DIR)

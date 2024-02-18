@@ -3,12 +3,10 @@
 \usepackage[style=authoryear-comp]{biblatex}
 \addbibresource{bibliography.bib}
 \usepackage{float}
-\usepackage{tabularx}
 \usepackage{siunitx}
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{subcaption}
-\usepackage{booktabs}
 \input{common.tex}
 
 \title{\actualTitle}
@@ -21,7 +19,7 @@
 \section{Introduction}
 Sexual dimorphism is the difference in size, colour, or presence of a feature between different sexes in a species. For instance, generally human males are larger than females, male mallard ducks are colourfully ornamented while females are drab, and male deer have antlers while females do not. Sexual dimorphism is very common in extant species, but detection of sexual dimorphism in extinct taxa, especially vertebrates, has been more challenging. Essentially, there are two difficulties in determining sexual dimorphism in extinct taxa: the `sexual' part and the `dimorphism' part. Determining the sex of the individual fossil, in the absence of rare features (such as medullary bone or bacula) is extremely challenging \parencite{saittaEffectSizeStatistical2020}. Similarly, determining the mass or size of a feature from a fossil (such as those of dinosaurs) can be difficult \parencite[p.~126]{brusatte2012}. When trying to determine the level of sexual dimorphism, these problems compound each other.
 
-There are several analytical methods which are commonly used. However, each of these has their weaknesses. The use of $t$ tests (for differences in the mean) or Hartigans' dip test (for unimodality) can suffer from low statistical power \parencite{mallonRecognizingSexualDimorphism2017} and in the case of $t$ tests a further difficulty is the prolonged growth period of most dinosaurs \parencite{honeProtractedGrowthImpedes2017}. As a result, positive results for dimorphism in dinosaurs are rare.
+There are several analytical methods which are commonly used. However, each of these has their weaknesses. The use of $t$ tests (for differences in the mean) or Hartigans' dip test (for unimodality) \parencite{hartiganDipTestUnimodality1985} can suffer from low statistical power \parencite{mallonRecognizingSexualDimorphism2017} and in the case of $t$ tests a further difficulty is the prolonged growth period of most dinosaurs \parencite{honeProtractedGrowthImpedes2017}. As a result, positive results for dimorphism in dinosaurs are rare.
 
 However, a proposed method in \cite{saittaEffectSizeStatistical2020} attempts to sidestep these difficulties by explicitly constructing growth curves for the different sexes. Herein is proposed a modification to that method in which Bayesian regression is used to recover a distribution of possible growth curves for each sex and subsequently applied to calculate the level of dimorphism.
 

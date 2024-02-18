@@ -70,7 +70,10 @@ p <- ggplot(sample_df, aes(error, group = E, colour = E)) +
     scale_y_continuous(labels = NULL) +
     custom_theme() +
     theme(legend.position = c(0.2, 0.8), legend.background = element_rect(fill = 'white'))
-ggsave_with_defaults(generate_filename("alligatorEffectSize.png"), plot = p)
+paper_image <- p
+poster_image <- p
+ggsave_with_defaults(generate_filename("alligatorEffectSize.png"), plot = paper_image)
+ggsave_with_defaults(generate_filename("alligatorEffectSize-poster.png"), plot = poster_image)
 
 # now the error by sex prediction error
 error_by_error_df <- data.frame(
@@ -110,4 +113,7 @@ p <- ggplot(error_by_error_df, aes(sex_prediction_accuracy, mean_error, colour =
     labs(x = "Sex Prediction Accuracy", y = "Error (Predicted - Actual)", colour = "Effect Size", title = "Relationship Between Dimorphism Error and Sex Prediction Accuracy") +
     custom_theme() +
     theme(legend.position = c(0.9, 0.8), legend.background = element_rect(fill = 'white'))
-ggsave_with_defaults(generate_filename('alligatorSexPredictionAccuracyDimorphismError.png'), plot = p)
+paper_image <- p
+poster_image <- p
+ggsave_with_defaults(generate_filename('alligatorSexPredictionAccuracyDimorphismError.png'), plot = paper_image)
+ggsave_with_defaults(generate_filename('alligatorSexPredictionAccuracyDimorphismError-poster.png'), plot = poster_image)

@@ -61,17 +61,28 @@ sample_df$error <- sample_df$sample_diff - sample_df$actual_diff
 
 p <- ggplot(sample_df, aes(error, group = E, colour = E)) +
     geom_density(aes(y = after_stat(density))) +
+    # scale_color_distiller(
+    #     type = "seq",
+    #     direction = -1,
+    #     palette = "Greys"
+    # ) +
+    labs(x = "Error (Predicted - Actual)", y = "Density", title = "Effect Size on Dimorphism Error", colour = "Effect Size") +
+    scale_y_continuous(labels = NULL)
+paper_image <- p +
     scale_color_distiller(
         type = "seq",
         direction = -1,
         palette = "Greys"
     ) +
-    labs(x = "Error (Predicted - Actual)", y = "Density", title = "Effect Size on Dimorphism Error", colour = "Effect Size") +
-    scale_y_continuous(labels = NULL) +
-    custom_theme() +
-    theme(legend.position = c(0.2, 0.8), legend.background = element_rect(fill = 'white'))
-paper_image <- p
-poster_image <- p
+    paper_theme(legend.position = c(0.2, 0.8), legend.background = element_rect(fill = 'white'))
+poster_image <- p +
+    scale_color_distiller(
+        type = "seq",
+        direction = -1,
+        # palette = "Reds"
+        palette = "Greys"
+    ) +
+    poster_theme(legend.position = c(0.2, 0.8), legend.background = element_rect(fill = 'white'))
 ggsave_with_defaults(generate_filename("alligatorEffectSize.png"), plot = paper_image)
 ggsave_with_defaults(generate_filename("alligatorEffectSize-poster.png"), plot = poster_image)
 
@@ -104,16 +115,28 @@ p <- ggplot(error_by_error_df, aes(sex_prediction_accuracy, mean_error, colour =
     geom_point() +
     geom_errorbar(aes(ymin = lower, ymax = upper)) +
     geom_smooth(method = 'lm', se = FALSE, colour = 'black') +
+    # scale_color_distiller(
+    #     type = "seq",
+    #     direction = -1,
+    #     palette = "Greys"
+    # ) +
+    scale_x_continuous(labels = scales::percent) +
+    labs(x = "Sex Prediction Accuracy", y = "Error (Predicted - Actual)", colour = "Effect Size", title = "Relationship Between Dimorphism Error and Sex Prediction Accuracy")
+
+paper_image <- p +
     scale_color_distiller(
         type = "seq",
         direction = -1,
         palette = "Greys"
     ) +
-    scale_x_continuous(labels = scales::percent) +
-    labs(x = "Sex Prediction Accuracy", y = "Error (Predicted - Actual)", colour = "Effect Size", title = "Relationship Between Dimorphism Error and Sex Prediction Accuracy") +
-    custom_theme() +
-    theme(legend.position = c(0.9, 0.8), legend.background = element_rect(fill = 'white'))
-paper_image <- p
-poster_image <- p
+    paper_theme(legend.position = c(0.9, 0.8), legend.background = element_rect(fill = 'white'))
+poster_image <- p +
+    scale_color_distiller(
+        type = "seq",
+        direction = -1,
+        # palette = "Reds"
+        palette = "Greys"
+    ) +
+    poster_theme(legend.position = c(0.8, 0.8), legend.background = element_rect(fill = 'white'))
 ggsave_with_defaults(generate_filename('alligatorSexPredictionAccuracyDimorphismError.png'), plot = paper_image)
 ggsave_with_defaults(generate_filename('alligatorSexPredictionAccuracyDimorphismError-poster.png'), plot = poster_image)

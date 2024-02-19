@@ -32,31 +32,30 @@
     titletotopverticalspace = 5mm,
     titletoblockverticalspace = 5mm,
   ] % See Section 4.1
-\block{Abstract}{While sexual dimorphism is common in extant taxa, detection in extinct taxa is made challenging by difficulties in determining the sex and size of organisms. Existing methods suffer from a lack of statistical power, making positive identification of dimorphism difficult. Herein is outline an modification to a method from \cite{saittaEffectSizeStatistical2020} which constructs sex-specific growth curves to determine sexual size dimorphism, but using Bayesian regression to construct the curves rather than standard non-linear regression. The method is shown to be robust and reliable, with the additional benefit of incorporating prior information to constrain dimorphism to biologically plausible levels.} % See Section 4.2
+\block{Abstract}{While sexual dimorphism is common in extant taxa, detection in extinct taxa is made challenging by difficulties in determining the sex and size of organisms combined with the low statistical power of existing methods. Herein is outlined a modification to the method from \cite{saittaEffectSizeStatistical2020} which constructs sex-specific growth curves to determine sexual size dimorphism, but using Bayesian regression to construct the curves rather than standard non-linear regression. The method is shown to be robust and reliable, with the additional benefit of incorporating prior information to constrain dimorphism to biologically plausible levels along with the incorporation of uncertainty to give a fuller understanding of the strength of our findings.} % See Section 4.2
 \begin{columns} % See Section 4.4
 \column{0.333333333} % See Section 4.4
 \block{Introduction}{
   \begin{itemize}
     \item Sexual dimorphism is common in extant taxa, but positive examples in dinosaurs are rare
-    \item Determining sex and size of an extinct organism is difficult
-    \item Existing methods suffer from low statistical power and can be confounded by e.g. juveniles
+    \item Determining sex and size of an extinct organism is difficult, and existing methods suffer from low statistical power and confounding by e.g. juveniles
     \item Method in \cite{saittaEffectSizeStatistical2020}: construct growth curves for predicted male and females separately to measure dimorphism
     \item Can suffer from lack of numerical convergence and implausible predictions (e.g. negative masses), particularly for small sample sizes
     \item Proposed modification: use Bayesian regression to estimte growth curves
   \end{itemize}
 }
-\block{Method}{
+\block[bodyinnersep=0mm]{Method}{
   \begin{enumerate}
         \item Gather data: age (or a correlate) and character of interest (e.g. length)
         \item Fit growth curve to population as a whole 
         \item Predict sex by assigning all samples above the population curve to one sex and all below to the other. 
-        \item \textcolor{red}{Fit separate growth curves to each predicted sex} $\to$ Create a posterior distribution for sex-specific parameters (Bayesian regression)
-        \item \textcolor{red}{Calculate maximum likelihood level of dimorphism} $\to$ Calculate posterior distribution for dimorphism
+        \item Create a posterior distribution for sex-specific parameters (Bayesian regression) (vs. fit separate growth curves to each predicted sex)
+        \item Calculate posterior distribution for dimorphism (vs. calculate maximum likelihood \& confidence interval for dimorphism)
   \end{enumerate}
   \begin{tikzfigure}[Simulated Alligator Populations \& Method]
     \includegraphics[width = 0.9\colwidth]{images/alligatorMethod-poster.png}
   \end{tikzfigure}
-For all data and code used here, along with additional analyses, see \url{https://github.com/EricRobertCampbell/aps-2024-poster-sexual-dimorphism}.
+For all data and code used here, along with additional analyses, see \\ \url{https://github.com/EricRobertCampbell/aps-2024-poster-sexual-dimorphism}.
 }
 
 \column{0.333333333}
@@ -75,9 +74,9 @@ For all data and code used here, along with additional analyses, see \url{https:
     \end{minipage}
     \begin{minipage}[t]{0.45\colwidth}
       \begin{itemize}
-          \item To estimate mean human height, start with what we know about the height before seeing any data --- the \emph{prior}
-          \item A sample of heights is collected and the \emph{likelihood} of that sample for each of the potential mean heights is calculated
-          \item Combination of those, our final belief about the value of the mean height, is the \emph{posterior} distribution
+          \item To estimate mean human height, start with what we know about the height before seeing any data --- the \emph{prior}.
+          \item A sample of heights is collected and the \emph{likelihood} of that sample for each of the potential mean heights is calculated.
+          \item Combination of those, our final belief about the value of the mean height, is the \emph{posterior} distribution.
       \end{itemize}
     \end{minipage}
   \begin{itemize}
@@ -105,6 +104,7 @@ For all data and code used here, along with additional analyses, see \url{https:
     \sigma_{m/f} &\sim \normal{0.25}{0.05} \\
     \end{align*}
   \end{minipage}
+    $L$: asymptotic length; $A$: related to size at hatching; $K$: related to growth rate.
     \item Bayesian model with wide priors centred around the population-level curve values was used to recover the values \parencite{rCore, rstan}.
 
   \end{itemize}
@@ -117,15 +117,16 @@ For all data and code used here, along with additional analyses, see \url{https:
 }
 
 \column{0.333333333}
-\block{Results}{
+\block[bodyinnersep=0mm]{Results}{
   \begin{itemize}
     \item \maia{}, \psit{}, and \tyran{}
     \item Logistic curve with constant standard deviation was used for all species
 \[
 \text{logistic}(\text{age}, L, q, k) = \frac{L}{1 + e^{q+k \ast \text{age}}}
   \]
+  $L$: asymptotic mass; $q$: related to initial mass; $k$: growth rate.
   \end{itemize}
-\begin{tikzfigure}[Posterior distribution and data]
+\begin{tikzfigure}[Posterior growth curves and data]
   \centering
   \begin{minipage}[b]{0.3\colwidth}
     \centering
@@ -145,12 +146,14 @@ For all data and code used here, along with additional analyses, see \url{https:
   \centering
   \includegraphics[width=0.9\colwidth]{images/combinedDimorphism-poster.png}
 \end{tikzfigure}
+}
+\block[bodyinnersep=0mm]{Conclusion}{
   \begin{itemize}
-    \item Strong evidence for \maia{} (35\% -- 62\%), weak evidence for \psit{} (-2\% -- 31\%), and moderate evidence against \tyran{} (-7\% -- 13\%) dimorphism.
-    \item Benefits: incorporation of uncertainty and prior knowledge (constrain curve to be biologically feasible)
+    \item Strong evidence for \maia{} (35\% -- 62\%), weak evidence for \psit{} (-2\% -- 31\%), and moderate evidence against \tyran{} (-7\% -- 13\%) dimorphism (95\% credible intervals).
+    \item Benefits: incorporation of uncertainty (calibrate the strength of our findings) and prior knowledge (constrain curve to be biologically feasible)
   \end{itemize}
 }
-\block{Next Steps}{
+\block[bodyinnersep=0mm]{Next Steps}{
   \begin{itemize}
     \item Incorporate measurement uncertainty (age, size) into the model
     \item Improve sex prediction (clustering algorithms, incorporate additional features)

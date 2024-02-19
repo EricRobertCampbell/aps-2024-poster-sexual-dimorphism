@@ -77,10 +77,11 @@ p <- ggplot(summary_df, aes(sample_size, mean)) +
     geom_pointrange(aes(ymin = lower, ymax = upper)) +
     geom_hline(yintercept = actual_diff, linewidth = 2, linetype = 'dashed') +
     annotate('label', label = "Actual Level", x = 4.5, y = 0.7, size = unit(8, 'pt'), fill = 'white', label.size = NA) +
-    labs(x = "Total Sample Size", y = "Dimorphism Level (m)", title = "Dimorphism Level (Mean and 95% Credible Interval) and Sample Size") +
-    custom_theme()
+    labs(x = "Total Sample Size", y = "Dimorphism Level (m)", title = "Dimorphism Level (Mean and 95% Credible Interval) and Sample Size")
 
-paper_image <- p
-poster_image <- p
+paper_image <- paper_colours(p) +
+    paper_theme()
+poster_image <- poster_colours(p) +
+    poster_theme()
 ggsave_with_defaults(generate_filename("alligatorSampleSize.png"), plot = paper_image)
 ggsave_with_defaults(generate_filename("alligatorSampleSize-poster.png"), plot = poster_image)

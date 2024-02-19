@@ -12,8 +12,7 @@ maiasaura <- data.frame(
 
 maiasaura_plot <- ggplot(maiasaura, aes(age, mass)) +
     geom_point() +
-    labs(x = "Age (years)", y = "Mass (kg)", title = "Maiasaura peeblesorum") +
-    custom_theme()
+    labs(x = "Age (years)", y = "Mass (kg)", title = "Maiasaura peeblesorum")
 
 initial_maiasaura_params <- list(
     L=2500,
@@ -66,13 +65,13 @@ for (age in unique(curve_data$age)) {
 p <- ggplot() +
     geom_point(data = maiasaura, mapping = aes(age, mass)) +
     geom_ribbon(data = range_df, mapping = aes(x = age, ymin = lower, ymax = upper), alpha = 0.2) +
-    labs(x = "Age (years)", y = "Mass (kg)", title = "Prior 95% Quantiles") +
-    custom_theme()
+    labs(x = "Age (years)", y = "Mass (kg)", title = "Prior 95% Quantiles")
 
-paper_image <- p
-poster_image <- p
+paper_image <- poster_colours(p) +
+    poster_theme()
+# poster_image <- p
 ggsave_with_defaults(generate_filename("maiasauraPrior.png"), plot = paper_image)
-ggsave_with_defaults(generate_filename("maiasauraPrior-poster.png"), plot = poster_image)
+# ggsave_with_defaults(generate_filename("maiasauraPrior-poster.png"), plot = poster_image)
 
 # now do the regression
 maiasaura$residual <- resid(population_fit)
@@ -102,10 +101,7 @@ maiasaura_samples <- extract(maiasaura.model)
 lapply(maiasaura_samples, head)
 
 p <- ggplot() +
-    custom_theme() +
-    geom_point(maiasaura, mapping = aes(age, mass, colour = sex), size = 3) +
-    scale_colour_grey() +
-    labs(x = "Age (years)", y = "Mass (kg)", colour = "Sex")
+    labs(x = "Age (years)", y = "Mass (kg)", colour = "Sex", title = "Maiasaura peeblesorum")
 
 # draw in samples from the male and female curves
 for (i in 1:100) {
@@ -121,16 +117,17 @@ for (i in 1:100) {
     curve_mass_large <- generalized_logistic(curve_ages, L = L_large, k = k_large, q = q_large)
 
     p <- p + 
-        geom_line(data = data.frame(age = curve_ages, mass = curve_mass_small, sex = "S"), mapping = aes(age, mass, colour = sex), alpha = 0.1) +
-        geom_line(data = data.frame(age = curve_ages, mass = curve_mass_large, sex = "L"), mapping = aes(age, mass, colour = sex), alpha = 0.1)
+        geom_line(data = data.frame(age = curve_ages, mass = curve_mass_small, sex = "S"), mapping = aes(age, mass, colour = sex), alpha = 0.2) +
+        geom_line(data = data.frame(age = curve_ages, mass = curve_mass_large, sex = "L"), mapping = aes(age, mass, colour = sex), alpha = 0.2)
 
 }
 p <- p +
-    labs(title = "Maiasaura peeblesorum Data and Posterior Growth Curves") +
-    theme(legend.position = c(0.7, 0.3), legend.background = element_rect(fill = 'white'))
+    geom_point(maiasaura, mapping = aes(age, mass, colour = sex), size = 3)
 
-paper_image <- p
-poster_image <- p
+paper_image <- paper_colours(p) +
+    paper_theme(legend.position = c(0.7, 0.3), legend.background = element_rect(fill = 'white'))
+poster_image <- poster_colours(p) +
+    poster_theme(legend.position = c(0.7, 0.3), legend.background = element_rect(fill = 'white'))
 ggsave_with_defaults(generate_filename('maiasauraPosterior.png'), plot = paper_image)
 ggsave_with_defaults(generate_filename('maiasauraPosterior-poster.png'), plot = poster_image)
 
@@ -211,13 +208,13 @@ for (age in unique(curve_data$age)) {
 p <- ggplot() +
     geom_point(data = psittacosaurus, mapping = aes(age, mass)) +
     geom_ribbon(data = range_df, mapping = aes(x = age, ymin = lower, ymax = upper), alpha = 0.2) +
-    labs(x = "Age (years)", y = "Mass (kg)", title = "Prior 95% Quantiles") +
-    custom_theme()
+    labs(x = "Age (years)", y = "Mass (kg)", title = "Prior 95% Quantiles")
 
-paper_image <- p
-poster_image <- p
+paper_image <- poster_colours(p) +
+    poster_theme()
+# poster_image <- p
 ggsave_with_defaults(generate_filename("psittacosaurusPrior.png"), plot = paper_image)
-ggsave_with_defaults(generate_filename("psittacosaurusPrior-poster.png"), plot = poster_image)
+# ggsave_with_defaults(generate_filename("psittacosaurusPrior-poster.png"), plot = poster_image)
 
 # now fit the psittacosaurus data
 psittacosaurus$residual <- resid(fit.population)
@@ -248,10 +245,7 @@ psittacosaurus.model
 psittacosaurus_samples <- extract(psittacosaurus.model)
 
 p <- ggplot() +
-    custom_theme() +
-    scale_colour_grey() +
-    geom_point(psittacosaurus, mapping = aes(age, mass, colour = sex), size = 3) +
-    labs(x = "Age (years)", y = "Mass (kg)", colour = "Sex")
+    labs(x = "Age (years)", y = "Mass (kg)", colour = "Sex", title = "Psittacosaurus lujiatunensis")
 
 # draw in samples from the large and small curves
 for (i in 1:100) {
@@ -267,15 +261,17 @@ for (i in 1:100) {
     curve_mass_large <- generalized_logistic(curve_ages, L = L_large, k = k_large, q = q_large)
 
     p <- p + 
-        geom_line(data = data.frame(age = curve_ages, mass = curve_mass_small, sex = "S"), mapping = aes(age, mass, colour = sex), alpha = 0.1) +
-        geom_line(data = data.frame(age = curve_ages, mass = curve_mass_large, sex = "L"), mapping = aes(age, mass, colour = sex), alpha = 0.1)
+        geom_line(data = data.frame(age = curve_ages, mass = curve_mass_small, sex = "S"), mapping = aes(age, mass, colour = sex), alpha = 0.2) +
+        geom_line(data = data.frame(age = curve_ages, mass = curve_mass_large, sex = "L"), mapping = aes(age, mass, colour = sex), alpha = 0.2)
 
 }
 p <- p + 
-    labs(title = "Psittacosaurus lujiatunensis Data and Posterior Growth Curves") +
-    theme(legend.position = c(0.7, 0.5), legend.background = element_rect(fill = 'white'))
-paper_image <- p
-poster_image <- p
+    geom_point(psittacosaurus, mapping = aes(age, mass, colour = sex), size = 3)
+
+paper_image <- paper_colours(p) +
+    paper_theme(legend.position = c(0.7, 0.5), legend.background = element_rect(fill = 'white'))
+poster_image <- poster_colours(p) +
+    poster_theme(legend.position = c(0.7, 0.5), legend.background = element_rect(fill = 'white'))
 ggsave_with_defaults(generate_filename("psittacosaurusPosterior.png"), plot = paper_image)
 ggsave_with_defaults(generate_filename("psittacosaurusPosterior-poster.png"), plot = poster_image)
 
@@ -356,12 +352,12 @@ for (age in unique(curve_data$age)) {
 p <- ggplot() +
     geom_point(data = tyrannosaurus, mapping = aes(age, mass)) +
     geom_ribbon(data = range_df, mapping = aes(x = age, ymin = lower, ymax = upper), alpha = 0.2) +
-    labs(x = "Age (years)", y = "Mass (kg)", title = "Prior 95% Quantiles") +
-    custom_theme()
-paper_image <- p
-poster_image <- p
+    labs(x = "Age (years)", y = "Mass (kg)", title = "Prior 95% Quantiles")
+paper_image <- paper_colours(p) +
+    paper_theme()
+# poster_image <- p
 ggsave_with_defaults(generate_filename('tyrannosaurPrior.png'), plot = paper_image)
-ggsave_with_defaults(generate_filename('tyrannosaurPrior-poster.png'), plot = poster_image)
+# ggsave_with_defaults(generate_filename('tyrannosaurPrior-poster.png'), plot = poster_image)
 
 # now fit the tyrannosaurus data
 tyrannosaurus$residual <- resid(fit.population)
@@ -391,10 +387,7 @@ tyrannosaurus.model
 
 tyrannosaurus_samples <- extract(tyrannosaurus.model)
 p <- ggplot() +
-    custom_theme() +
-    scale_colour_grey() +
-    geom_point(tyrannosaurus, mapping = aes(age, mass, colour = sex), size = 3) +
-    labs(x = "Age (years)", y = "Mass (kg)", colour = "Sex")
+    labs(x = "Age (years)", y = "Mass (kg)", colour = "Sex", title = "Tyrannosaurus rex")
 
 # draw in samples from the large and small curves
 for (i in 1:100) {
@@ -410,15 +403,17 @@ for (i in 1:100) {
     curve_mass_large <- generalized_logistic(curve_ages, L = L_large, k = k_large, q = q_large)
 
     p <- p + 
-        geom_line(data = data.frame(age = curve_ages, mass = curve_mass_small, sex = "S"), mapping = aes(age, mass, colour = sex), alpha = 0.1) +
-        geom_line(data = data.frame(age = curve_ages, mass = curve_mass_large, sex = "L"), mapping = aes(age, mass, colour = sex), alpha = 0.1)
+        geom_line(data = data.frame(age = curve_ages, mass = curve_mass_small, sex = "S"), mapping = aes(age, mass, colour = sex), alpha = 0.2) +
+        geom_line(data = data.frame(age = curve_ages, mass = curve_mass_large, sex = "L"), mapping = aes(age, mass, colour = sex), alpha = 0.2)
 
 }
 p <- p + 
-    labs(title = "Tyrannosaurus rex Data and Posterior Growth Curves") +
-    theme(legend.position = c(0.5, 0.5), legend.background = element_rect(fill = 'white'))
-paper_image <- p
-poster_image <- p
+    geom_point(tyrannosaurus, mapping = aes(age, mass, colour = sex), size = 3)
+
+paper_image <- paper_colours(p) +
+    paper_theme(legend.position = c(0.5, 0.5), legend.background = element_rect(fill = 'white'))
+poster_image <- poster_colours(p) +
+    poster_theme(legend.position = c(0.5, 0.5), legend.background = element_rect(fill = 'white'))
 ggsave_with_defaults(generate_filename('tyrannosaurPosterior.png'), plot = paper_image)
 ggsave_with_defaults(generate_filename('tyrannosaurPosterior-poster.png'), plot = poster_image)
 
@@ -462,16 +457,15 @@ saitta_dimorphism_df <- data.frame(
 )
 
 p <- ggplot(dimorphism_df, aes(x = x, colour = species)) +
-    custom_theme() +
-    scale_colour_grey() +
-    scale_fill_grey() +
     geom_density(aes(y = after_stat(density), fill = species), alpha = 0.2, linewidth = 2) +
     geom_vline(data = saitta_dimorphism_df, mapping = aes(xintercept = dimorphism, colour = species, linetype = "Saitta et al (2020)"), linewidth = 2) +
     scale_linetype_manual(values = c("Saitta et al (2020)" = 'dashed')) +
     scale_x_continuous(labels = scales::percent) +
     labs(x = "Percent Dimorphism", y = "Density", title = "A Comparison of Different Distributions of Dimorphism", colour = "Species", fill = "Species", linetype = NULL)
-paper_image <- p
-poster_image <- p
+paper_image <- paper_colours(p) +
+    paper_theme(legend.position = c(0.85, 0.8), legend.background = element_rect(fill = 'white'))
+poster_image <- poster_colours(p) +
+    poster_theme(legend.position = c(0.85, 0.8), legend.background = element_rect(fill = 'white'))
 ggsave_with_defaults(generate_filename("combinedDimorphism.png"), plot = paper_image)
 ggsave_with_defaults(generate_filename("combinedDimorphism-poster.png"), plot = poster_image)
 

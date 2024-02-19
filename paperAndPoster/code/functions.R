@@ -1,4 +1,3 @@
-
 library(ggplot2)
 library(FSA) # for the vbStart function to find good parameters for the von Bertalanffy function
 library(minpack.lm) # a more robust version of nls for non-linear curve fitting to avoid problems with e.g. very small sample sizes
@@ -9,27 +8,56 @@ rstan_options(auto_write = TRUE)
 
 source("constants.R")
 
-custom_theme <- function() {
+base_theme <- function() {
   theme_minimal() +
     theme(
       panel.background = element_rect(fill = "white"),
       panel.grid.major = element_line(color = alpha("black", 0.5), linetype = "dotted", linewidth = 0.5),
       panel.grid.minor = element_blank(),
-      axis.text = element_text(size = 12),  # Adjust the font size of axis labels
-      axis.title = element_text(size = 16),  # Adjust the font size of axis titles
-      plot.title = element_text(size = 20, hjust = 0.5),  # Adjust the font size and center the plot title
-      plot.subtitle = element_text(size = 16, hjust = 0.5)  # Adjust the font size and center the plot subtitle
     )
 }
 
-paper_colours <- function() {
+paper_theme <- function(...) base_theme() +
+    theme(
+      axis.text = element_text(size = 12),  # Adjust the font size of axis labels
+      axis.title = element_text(size = 16),  # Adjust the font size of axis titles
+      plot.title = element_text(size = 20, hjust = 0.5),  # Adjust the font size and center the plot title
+      plot.subtitle = element_text(size = 16, hjust = 0.5),  # Adjust the font size and center the plot subtitle
+      ...
+    )
+
+poster_theme <- function(...) base_theme() + 
+    theme(
+        axis.text = element_text(size = 16),  # Adjust the font size of axis labels
+        axis.title = element_text(size = 20),  # Adjust the font size of axis titles
+        plot.title = element_text(size = 24, hjust = 0.5),  # Adjust the font size and center the plot title
+        plot.subtitle = element_text(size = 20, hjust = 0.5),  # Adjust the font size and center the plot subtitle
+        legend.title = element_text(size = 20),
+        legend.text = element_text(size = 14),  # Adjust text size
+        ...
+    )
+
+
+
+cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+paper_colours <- function(p) {
+    p +
     scale_colour_grey() +
     scale_fill_grey()
 }
 
-poster_colours <- function() {
-
+poster_colours <- function(p) {
+    p +
+    scale_colour_brewer(palette = "Set1") +
+    scale_fill_brewer(palette = "Set1")
+    # scale_colour_manual(values = cbbPalette) +
+    # scale_fill_manual(values = cbbPalette)
+    # scale_colour_viridis_d(option = "plasma") +
+    # scale_fill_viridis_d(option = "plasma")
 }
+# paper_colours <- function() scale_colour_grey()
+# poster_colours <- function() scale_fill_viridis_d()
 
 generalized_von_bertalanffy <- function(age, L, A, K) {
     L * (1 - A * exp(-K * age))
@@ -130,6 +158,3 @@ ggsave_with_defaults <- function(filename, plot, width = 15, height = 8, dpi = 6
 }
 
 generate_filename <- function(name) sprintf("../images/%s", name)
-
-paper_colours <- function() scale_colour_grey()
-poster_colours <- function() scale_fill_viridis_d()

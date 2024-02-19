@@ -8,6 +8,7 @@ DOCX_FILE = paper.docx
 PDF_FILE = paper.pdf
 POSTER_FILE = poster.pdf
 IMAGES_DIR = images/
+ALL_IMAGES = $(wildcard $(IMAGES_DIR)/*)
 
 all: $(PDF_FILE) $(DOCX_FILE)
 
@@ -15,11 +16,11 @@ paper: $(PDF_FILE) $(DOCX_FILE)
 
 poster: $(POSTER_FILE)
 
-$(POSTER_FILE): $(POSTER_TEX) $(BIB_FILE) $(IMAGES_DIR)
+$(POSTER_FILE): $(POSTER_TEX) $(BIB_FILE) $(ALL_IMAGES)
 	latexmk $(POSTER_TEX)
 
 # Target: paper.pdf
-$(PDF_FILE): $(TEX_FILE) $(BIB_FILE) $(IMAGES_DIR)
+$(PDF_FILE): $(TEX_FILE) $(BIB_FILE) $(ALL_IMAGES)
 	latexmk -pdf $(TEX_FILE)
 
 # Target: paper.docx

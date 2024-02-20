@@ -458,7 +458,7 @@ saitta_dimorphism_df <- data.frame(
 
 p <- ggplot(dimorphism_df, aes(x = x, colour = species)) +
     geom_density(aes(y = after_stat(density), fill = species), alpha = 0.2, linewidth = 2) +
-    geom_vline(data = saitta_dimorphism_df, mapping = aes(xintercept = dimorphism, colour = species, linetype = "Saitta et al (2020)"), linewidth = 2) +
+    geom_vline(data = saitta_dimorphism_df, mapping = aes(xintercept = dimorphism, colour = species, linetype = "Saitta et al. 2020"), linewidth = 2) +
     scale_linetype_manual(values = c("Saitta et al (2020)" = 'dashed')) +
     scale_x_continuous(labels = scales::percent) +
     labs(x = "Percent Dimorphism", y = "Density", title = "A Comparison of Different Distributions of Dimorphism", colour = "Species", fill = "Species", linetype = NULL)

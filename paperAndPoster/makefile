@@ -32,4 +32,8 @@ clean:
 	latexmk -C
 	rm *.bbl
 	rm *.run.xml
+	rm *.fdb_latexmk
+	rm *.aux
+	rm *.fls
+	rm *.log
 	rm -f $(DOCX_FILE)

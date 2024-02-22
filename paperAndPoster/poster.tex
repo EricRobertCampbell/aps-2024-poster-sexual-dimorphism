@@ -7,6 +7,8 @@
   blockverticalspace=0mm,
   colspace=5mm,
 ]{tikzposter} % See Section 3
+\usetikzlibrary{decorations.footprints}
+\usetikzlibrary{decorations.markings}
 \usepackage{xcolor}
 \usepackage[style=authoryear-comp, locallabelwidth]{biblatex}
 \addbibresource{bibliography.bib}
@@ -60,11 +62,34 @@
     \colorlet{notefrcolor}{colorTwo!50!white}
  }
 
+\defineblockstyle{MyBlockStyle}{
+    titlewidthscale=1, bodywidthscale=1, titleleft,
+    titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=0pt, bodyoffsety=0pt,
+    bodyverticalshift=0pt, roundedcorners=0, linewidth=0.2cm,
+    titleinnersep=1cm, bodyinnersep=1cm
+}{
+    \begin{scope}[line width=\blocklinewidth, rounded corners=\blockroundedcorners]
+       \ifBlockHasTitle %
+           \draw[draw=none]%, fill=blockbodybgcolor]
+               (blockbody.south west) rectangle (blocktitle.north east);
+          %  \draw[color=blocktitlebgcolor, loosely dashed, thick]
+           \draw[color=blocktitlebgcolor, loosely dashed]
+          %  \draw[color=blocktitlebgcolor, decoration={footprints, stride length=50pt, foot sep=0pt, foot of=bird}, decorate]
+               (blocktitle.south west) -- (blocktitle.south east);%
+       \else
+             \draw[draw=none]%, fill=blockbodybgcolor]
+                 (blockbody.south west) rectangle (blockbody.north east);
+        \fi
+    \end{scope}
+}
+
+
 \definelayouttheme{MyTheme}{ % copied from the definition of the 'Simple' style to allow customization
     \usecolorstyle{MyColourStyle}
     \usebackgroundstyle{Default}
     \usetitlestyle{Default}
-    \useblockstyle{Minimal}
+    % \useblockstyle{Minimal}
+    \useblockstyle{MyBlockStyle}
     \useinnerblockstyle{Default}
     \usenotestyle{Default}
 }
@@ -79,14 +104,16 @@
     titletotopverticalspace = 5mm,
     titletoblockverticalspace = 5mm,
   ] % See Section 4.1
-\block{Abstract}{While sexual dimorphism is common in extant taxa, detection in extinct ones is made challenging by difficulties in determining the sex and size of fossil organisms combined with the low statistical power of existing methods. Herein is outlined a modification to the method from \cite{saittaEffectSizeStatistical2020} which constructs sex-specific growth curves to determine sexual size dimorphism, but using Bayesian regression to construct the curves rather than standard non-linear regression. The method is shown to be robust and reliable on both simulated and actual populations, with the additional benefit of incorporating prior information to constrain dimorphism to biologically plausible levels along with the incorporation of uncertainty to give a fuller understanding of the strength of the results.} % See Section 4.2
+\block{Abstract}{While sexual dimorphism is common in extant taxa, detection in extinct ones is made challenging by difficulties in determining the sex and size of fossil organisms combined with the low statistical power of existing methods. Herein is outlined a modification to the method from \cite{saittaEffectSizeStatistical2020} employing Bayesian regression instead of standard non-linear regression to construct sex-specific growth curves for quantifying sexual size dimorphism in dinosaurs.
+% which constructs sex-specific growth curves to determine sexual size dimorphism, but using Bayesian regression to construct the curves rather than standard non-linear regression.
+ The method is shown to be robust and reliable on both simulated and actual populations, with the additional benefit of incorporating prior information to constrain dimorphism to biologically plausible levels along with the incorporation of uncertainty to give a fuller understanding of the strength of the results.} % See Section 4.2
 \begin{columns} % See Section 4.4
 \column{0.333333333} % See Section 4.4
 \block{Introduction}{
   \begin{itemize}
     \item Sexual dimorphism is common in extant taxa, but positive examples in dinosaurs are rare
     \item Levels of dimorphism can correlate with  ecological behaviours: monogamy, group size, inter- and intrasexual competition, \&c., potentially providing insight into dinosaur ecologies and social structure
-    \item Determining sex and size of an extinct organism is difficult, and existing methods to determine dimorphism suffer from low statistical power and confounding by e.g. presence of juveniles
+    \item Determining sex and size of an extinct organism is difficult, and existing methods to determine dimorphism (Hartigans' dip test, $t$ tests) suffer from low statistical power and confounding by e.g. presence of juveniles
     \item Method in \cite{saittaEffectSizeStatistical2020}: construct growth curves for predicted male and females separately to measure dimorphism. This method can suffer from lack of numerical convergence and implausible predictions (e.g. negative masses), particularly for small sample sizes
     \item Proposed modification: use Bayesian regression to estimate growth curves, getting as a result a posterior distribution for level of dimorphism rather than a point estimate or range
   \end{itemize}
@@ -101,7 +128,7 @@
   \end{enumerate}
   \begin{tikzfigure}[Simulated alligator populations \& method, demonstrating the actual male and female populations, the predicted sex, and the population-level curve used for the sex prediction]
     \includegraphics[width = 0.9\colwidth]{images/alligatorMethod-poster.png}
-  \end{tikzfigure}
+  \end{tikzfigure}%
 For all data and code used here, along with additional analyses, see \\ \url{https://github.com/EricRobertCampbell/aps-2024-poster-sexual-dimorphism}.
 }
 
@@ -115,17 +142,17 @@ For all data and code used here, along with additional analyses, see \\ \url{htt
     \begin{minipage}[t]{0.45\colwidth}
       \begin{tikzfigure}[Bayesian parameter estimation]
         \centering
-        \includegraphics[width = \textwidth]{images/bayesianExample-poster.png}
+        \includegraphics[width = \textwidth]{images/bayesianExample-poster.png}%
         \label{fig:bayesianExplanation}
-      \end{tikzfigure}
-    \end{minipage}
+      \end{tikzfigure}%
+    \end{minipage}%
     \begin{minipage}[t]{0.45\colwidth}
       \begin{itemize}
           \item To estimate mean human height, start with what we know about the height before seeing any data --- the \emph{prior}.
           \item A sample of heights is collected and the \emph{likelihood} of that sample for each of the potential mean heights is calculated.
           \item Combination of those, our final belief about the value of the mean height, is the \emph{posterior} distribution.
       \end{itemize}
-    \end{minipage}
+    \end{minipage}%
   \begin{itemize}
     \item American alligator (\species{Alligator mississippiensis}) growth parameters from \cite{wilkinsonGrowthRatesAmerican1997} (von Bertalanffy growth curve), but with constant standard deviation
 
@@ -151,16 +178,16 @@ For all data and code used here, along with additional analyses, see \\ \url{htt
     \sigma_{m/f} &\sim \normal{0.25}{0.05} \\
     \end{align*}
   \end{minipage}
-    $L$: asymptotic length; $A$: related to size at hatching; $K$: related to growth rate.
+      \makebox[0.9\colwidth]{$L$: asymptotic length; $A$: related to size at hatching; $K$: related to growth rate.}
     \item Bayesian model with wide priors centred around the population-level curve values was used to recover the values \parencite{rCore, rstan}.
 
   \end{itemize}
     \begin{tikzfigure}[Verification results. The method becomes more accurate with larger sample sizes, although the 95\% credible interval consistently includes the true value. Due to the sex prediction method, it tends to overestimate small amounts of dimorphism but accurately predict large ones. Much of the error in the level of dimorphism is due to the sex prediction accuracy, which is worse at lower levels of dimorphism.]
-      \includegraphics[width = 0.4\colwidth]{images/alligatorSampleSize-poster.png}
-      \includegraphics[width = 0.4\colwidth]{images/alligatorEffectSize-poster.png}
+      \includegraphics[width = 0.4\colwidth]{images/alligatorSampleSize-poster.png}%
+      \includegraphics[width = 0.4\colwidth]{images/alligatorEffectSize-poster.png}%
 
-      \includegraphics[width = 0.45\colwidth]{images/alligatorSexPredictionAccuracyDimorphismError-poster.png}
-    \end{tikzfigure}
+      \includegraphics[width = 0.45\colwidth]{images/alligatorSexPredictionAccuracyDimorphismError-poster.png}%
+    \end{tikzfigure}%
 }
 
 \column{0.333333333}
@@ -171,28 +198,27 @@ For all data and code used here, along with additional analyses, see \\ \url{htt
 \[
 \text{logistic}(\text{age}, L, q, k) = \frac{L}{1 + e^{q+k \ast \text{age}}}
   \]
-  $L$: asymptotic mass; $q$: related to initial mass; $k$: growth rate.
+  \makebox[0.9\colwidth]{$L$: asymptotic mass; $q$: related to initial mass; $k$: growth rate.}
   \end{itemize}
 \begin{tikzfigure}[Raw data and a random sample of growth curves for the dinosaurs. Since we lack data on the actual sexes, $l$ (``larger'') and $s$ (``smaller'') are used as placeholders. A clear separation is shown in \maia{}, while there is considerably more overlap in \psit{} and \tyran{}. \psit{} lacks individuals in the asymptotic portion of the growth curve, while \tyran{} lacks both very young and very old individuals.]
   \centering
   \begin{minipage}[b]{0.3\colwidth}
     \centering
-    \includegraphics[width=\textwidth]{images/maiasauraPosterior-poster.png}
-  \end{minipage}
+    \includegraphics[width=\textwidth]{images/maiasauraPosterior-poster.png}%
+  \end{minipage}%
   \begin{minipage}[b]{0.3\colwidth}
     \centering
-    \includegraphics[width=\textwidth]{images/psittacosaurusPosterior-poster.png}
-  \end{minipage}
+    \includegraphics[width=\textwidth]{images/psittacosaurusPosterior-poster.png}%
+  \end{minipage}%
   \begin{minipage}[b]{0.3\colwidth}
     \centering
-    \includegraphics[width=\textwidth]{images/tyrannosaurPosterior-poster.png}
-  \end{minipage}
-\end{tikzfigure} 
-
+    \includegraphics[width=\textwidth]{images/tyrannosaurPosterior-poster.png}%
+  \end{minipage}%
+\end{tikzfigure}%
 \begin{tikzfigure}[Posterior distribution for relative dimorphism (larger sex as percentage of smaller one) for the three dinosaur species.]
   \centering
-  \includegraphics[width=0.9\colwidth]{images/combinedDimorphism-poster.png}
-\end{tikzfigure}
+  \includegraphics[width=0.9\colwidth]{images/combinedDimorphism-poster.png}%
+\end{tikzfigure}%
 }
 \block[bodyinnersep=0mm]{Conclusion}{
   \begin{itemize}
@@ -204,7 +230,7 @@ For all data and code used here, along with additional analyses, see \\ \url{htt
 \block[bodyinnersep=0mm]{Next Steps}{
   \begin{itemize}
     \item Incorporate measurement uncertainty (age, size) into the model
-    \item Improve sex prediction (clustering algorithms, incorporate additional features)
+    \item \textbf{Improve sex prediction (clustering algorithms, incorporate additional features)}
     \item Use of mixture models to avoid assuming dimorphism
   \end{itemize}
 }
